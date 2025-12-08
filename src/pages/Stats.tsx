@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db/db';
@@ -8,14 +9,18 @@ export const Stats = () => {
     const competitors = useLiveQuery(() => db.competitors.toArray());
     const events = useLiveQuery(() => db.events.toArray());
     const allRaces = useLiveQuery(() => db.races.toArray());
+    const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
 
     if (!competitors || !events || !allRaces) return null;
 
-    // Calculate Global Standings
-    // 1. Group races by event to find rankings within each event
-    // 2. Assign points based on event level and rank
-    // 3. Aggregate points per competitor
+    // Filter logic
+    const availableYears = Array.from(new Set(events.map(e => new Date(e.date).getFullYear()))).sort((a, b) => b - a);
 
+    const filteredEvents = selectedYear === 'all'
+        ? events
+        : events.filter(e => new Date(e.date).getFullYear() === selectedYear);
+
+    // Calculate Global Standings based on filteredEvents
     const eventRankings = new Map<number, { competitorId: number; rank: number; points: number }[]>();
 
     // Points system config
@@ -27,7 +32,8 @@ export const Stats = () => {
         5: [200, 120, 80, 40, 20]
     };
 
-    events.forEach(event => {
+    filteredEvents.forEach(event => {
+        // @ts-ignore
         const eventRaces = allRaces.filter(r => r.eventId === event.id && r.totalTime);
         eventRaces.sort((a, b) => (a.totalTime || 0) - (b.totalTime || 0));
 
@@ -40,6 +46,7 @@ export const Stats = () => {
             return { competitorId: race.competitorId, rank, points };
         });
 
+        // @ts-ignore
         eventRankings.set(event.id!, rankings);
     });
 
@@ -51,6 +58,7 @@ export const Stats = () => {
         let racesCount = 0;
 
         eventRankings.forEach(rankings => {
+            // @ts-ignore
             const perf = rankings.find(r => r.competitorId === c.id);
             if (perf) {
                 totalPoints += perf.points;
@@ -61,38 +69,71 @@ export const Stats = () => {
         });
 
         return { ...c, totalPoints, wins, podiums, racesCount };
-    });
+    }).filter(c => c.totalPoints > 0 || c.racesCount > 0); // Only show active in this period
 
     // Sort by points
-    competitorStats.sort((a, b) => b.totalPoints - a.totalPoints);
+    competitorStats.sort((a, b) => {
+        if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
+        return a.name.localeCompare(b.name); // Tie-breaker by name
+    });
+
+    // Filter races for best times/shooters based on filteredEvents IDs
+    const filteredEventIds = filteredEvents.map(e => e.id);
+    const currentPeriodRaces = allRaces.filter(r => filteredEventIds.includes(r.eventId));
 
     return (
         <div className="space-y-8">
-            <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-500">
-                Classement Général
-            </h1>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-500">
+                    Classement {selectedYear === 'all' ? 'Général' : selectedYear}
+                </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                {/* Top 3 Cards */}
-                {competitorStats.slice(0, 3).map((stat, idx) => (
-                    <div key={stat.id} className={`glass-panel p-6 rounded-2xl border-t-4 ${idx === 0 ? 'border-yellow-500' : idx === 1 ? 'border-slate-400' : 'border-amber-700'} relative overflow-hidden`}>
-                        <div className="absolute top-0 right-0 p-4 opacity-5">
-                            <Trophy className="w-24 h-24" />
-                        </div>
-                        <div className="relative z-10">
-                            <div className="text-4xl font-black mb-2 flex items-center gap-3">
-                                <span className={idx === 0 ? 'text-yellow-500' : idx === 1 ? 'text-slate-400' : 'text-amber-700'}>#{idx + 1}</span>
-                                <span className="text-xl text-white font-bold truncate">{stat.name}</span>
-                            </div>
-                            <div className="text-3xl font-bold text-white mb-1">{stat.totalPoints} <span className="text-sm font-normal text-slate-400">pts</span></div>
-                            <div className="flex gap-4 text-sm text-slate-400 mt-4">
-                                <div className="flex items-center gap-1"><Trophy className="w-3 h-3 text-yellow-500" /> {stat.wins} Victoires</div>
-                                <div className="flex items-center gap-1"><Star className="w-3 h-3" /> {stat.racesCount} Courses</div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                <div className="flex items-center gap-2 bg-slate-800 p-1 rounded-lg overflow-x-auto max-w-full">
+                    <button
+                        onClick={() => setSelectedYear('all')}
+                        className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all whitespace-nowrap ${selectedYear === 'all' ? 'bg-white/10 text-white' : 'text-slate-400 hover:text-white'}`}
+                    >
+                        Global
+                    </button>
+                    {availableYears.map(year => (
+                        <button
+                            key={year}
+                            onClick={() => setSelectedYear(year)}
+                            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${selectedYear === year ? 'bg-white/10 text-white' : 'text-slate-400 hover:text-white'}`}
+                        >
+                            {year}
+                        </button>
+                    ))}
+                </div>
             </div>
+
+            {/* Top 3 Cards - Show placeholders if empty */}
+            {competitorStats.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    {competitorStats.slice(0, 3).map((stat, idx) => (
+                        <div key={stat.id} className={`glass-panel p-6 rounded-2xl border-t-4 ${idx === 0 ? 'border-yellow-500' : idx === 1 ? 'border-slate-400' : 'border-amber-700'} relative overflow-hidden`}>
+                            <div className="absolute top-0 right-0 p-4 opacity-5">
+                                <Trophy className="w-24 h-24" />
+                            </div>
+                            <div className="relative z-10">
+                                <div className="text-4xl font-black mb-2 flex items-center gap-3">
+                                    <span className={idx === 0 ? 'text-yellow-500' : idx === 1 ? 'text-slate-400' : 'text-amber-700'}>#{idx + 1}</span>
+                                    <span className="text-xl text-white font-bold truncate">{stat.name}</span>
+                                </div>
+                                <div className="text-3xl font-bold text-white mb-1">{stat.totalPoints} <span className="text-sm font-normal text-slate-400">pts</span></div>
+                                <div className="flex gap-4 text-sm text-slate-400 mt-4">
+                                    <div className="flex items-center gap-1"><Trophy className="w-3 h-3 text-yellow-500" /> {stat.wins} Victoires</div>
+                                    <div className="flex items-center gap-1"><Star className="w-3 h-3" /> {stat.racesCount} Courses</div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <div className="text-center py-12 glass-panel rounded-2xl">
+                    <p className="text-slate-400">Aucune donnée disponible pour cette période.</p>
+                </div>
+            )}
 
             <div className="glass-panel rounded-2xl overflow-hidden">
                 <table className="w-full text-left">
@@ -119,6 +160,13 @@ export const Stats = () => {
                                 <td className="p-4 text-right font-bold text-yellow-500">{stat.totalPoints}</td>
                             </tr>
                         ))}
+                        {competitorStats.length === 0 && (
+                            <tr>
+                                <td colSpan={5} className="p-8 text-center text-slate-500">
+                                    Aucun concurrent classé.
+                                </td>
+                            </tr>
+                        )}
                     </tbody>
                 </table>
             </div>
@@ -131,24 +179,28 @@ export const Stats = () => {
                         Meilleurs Temps (Sprint)
                     </h2>
                     <div className="space-y-3">
-                        {allRaces?.filter(r => r.totalTime && r.mode === 'sprint').sort((a, b) => (a.totalTime || 0) - (b.totalTime || 0)).slice(0, 5).map((race, idx) => {
-                            const competitor = competitors?.find(c => c.id === race.competitorId);
-                            const event = events?.find(e => e.id === race.eventId);
-                            return (
-                                <div key={race.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5">
-                                    <div className="flex gap-3">
-                                        <span className="font-mono text-slate-500">#{idx + 1}</span>
-                                        <div>
-                                            <div className="font-medium text-white">{competitor?.name}</div>
-                                            <div className="text-xs text-slate-500">{event?.name}</div>
+                        {currentPeriodRaces?.filter(r => r.totalTime && r.mode === 'sprint').length > 0 ? (
+                            currentPeriodRaces?.filter(r => r.totalTime && r.mode === 'sprint').sort((a, b) => (a.totalTime || 0) - (b.totalTime || 0)).slice(0, 5).map((race, idx) => {
+                                const competitor = competitors?.find(c => c.id === race.competitorId);
+                                const event = events?.find(e => e.id === race.eventId);
+                                return (
+                                    <div key={race.id} className="flex items-center justify-between p-3 rounded-lg bg-white/5">
+                                        <div className="flex gap-3">
+                                            <span className="font-mono text-slate-500">#{idx + 1}</span>
+                                            <div>
+                                                <div className="font-medium text-white">{competitor?.name}</div>
+                                                <div className="text-xs text-slate-500">{event?.name}</div>
+                                            </div>
+                                        </div>
+                                        <div className="font-mono font-bold text-emerald-400">
+                                            {new Date(race.totalTime || 0).toISOString().slice(14, 21)}
                                         </div>
                                     </div>
-                                    <div className="font-mono font-bold text-emerald-400">
-                                        {new Date(race.totalTime || 0).toISOString().slice(14, 21)}
-                                    </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })
+                        ) : (
+                            <p className="text-slate-500 italic text-sm">Pas de temps enregistrés.</p>
+                        )}
                     </div>
                 </div>
 
@@ -159,9 +211,9 @@ export const Stats = () => {
                         Meilleurs Tireurs
                     </h2>
                     <div className="space-y-3">
-                        {/* We calculate accuracy for all racers who have done at least 1 race */}
+                        {/* We calculate accuracy for all racers who have done at least 1 race in current period */}
                         {competitors.map(c => {
-                            const cRaces = allRaces.filter(r => r.competitorId === c.id && (r.shooting1 || r.shooting2));
+                            const cRaces = currentPeriodRaces.filter(r => r.competitorId === c.id && (r.shooting1 || r.shooting2));
                             let hits = 0;
                             let shots = 0;
                             cRaces.forEach(r => {
@@ -185,7 +237,7 @@ export const Stats = () => {
                                     </div>
                                 </div>
                             ))}
-                        {allRaces.length < 5 && <p className="text-slate-500 text-sm italic">Pas assez de données...</p>}
+                        {currentPeriodRaces.length === 0 && <p className="text-slate-500 text-sm italic">Pas de données de tir.</p>}
                     </div>
                 </div>
             </div>

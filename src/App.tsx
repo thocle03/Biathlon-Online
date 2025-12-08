@@ -8,6 +8,7 @@ import { Events } from './pages/Events';
 import { EventCreate } from './pages/EventCreate';
 import { EventDashboard } from './pages/EventDashboard';
 import { Race } from './pages/Race';
+import { ManualRaceEntry } from './pages/ManualRaceEntry';
 import { Stats } from './pages/Stats';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="events/new" element={<EventCreate />} />
           <Route path="events/:id" element={<EventDashboard />} />
           <Route path="race/:id" element={<Race />} />
+          <Route path="race/manual/:id" element={<ManualRaceEntry />} />
           <Route path="stats" element={<Stats />} />
           <Route path="settings" element={<div>Settings (WIP)</div>} />
         </Route>

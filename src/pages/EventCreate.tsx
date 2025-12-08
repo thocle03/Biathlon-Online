@@ -15,6 +15,7 @@ export const EventCreate = () => {
     const competitors = useLiveQuery(() => db.competitors.toArray());
 
     const [name, setName] = useState('');
+    const [date, setDate] = useState('2025-08-14');
     const [level, setLevel] = useState(1);
     const [selectedIds, setSelectedIds] = useState<number[]>([]);
     const [duels, setDuels] = useState<Duel[]>([]);
@@ -59,7 +60,7 @@ export const EventCreate = () => {
         try {
             const eventId = await db.events.add({
                 name,
-                date: new Date(),
+                date: new Date(date),
                 level,
                 status: 'active'
             });
@@ -135,8 +136,18 @@ export const EventCreate = () => {
                             <input
                                 value={name}
                                 onChange={e => setName(e.target.value)}
-                                className="w-full px-4 py-2 bg-slate-800 border border-white/10 rounded-lg"
+                                className="w-full px-4 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                                 placeholder="ex: Coupe du Monde - Étape 1"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-slate-400 mb-1">Date</label>
+                            <input
+                                type="date"
+                                value={date}
+                                onChange={e => setDate(e.target.value)}
+                                className="w-full px-4 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                             />
                         </div>
 
@@ -171,8 +182,8 @@ export const EventCreate = () => {
                                     key={c.id}
                                     onClick={() => toggleSelection(c.id!)}
                                     className={`flex items-center justify-between p-3 rounded-xl cursor-pointer transition-all ${selectedIds.includes(c.id!)
-                                            ? 'bg-blue-600/20 border border-blue-500/50'
-                                            : 'bg-slate-800/50 border border-transparent hover:bg-slate-800'
+                                        ? 'bg-blue-600/20 border border-blue-500/50'
+                                        : 'bg-slate-800/50 border border-transparent hover:bg-slate-800'
                                         }`}
                                 >
                                     <span className="font-medium">{c.name}</span>
