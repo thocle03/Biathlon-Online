@@ -11,13 +11,49 @@ export const Competitors = () => {
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
 
-    const competitors = useLiveQuery(
+    const allRaces = useLiveQuery(() => db.races.toArray());
+
+    const competitorsData = useLiveQuery(
         () => db.competitors
             .filter(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()))
-            .reverse() // Newest first by default if we used an auto-increment ID, but here just reverse iteration
+            .reverse()
             .toArray(),
         [searchQuery]
     );
+
+    // Compute dynamic stats
+    const competitors = competitorsData?.map(c => {
+        const cRaces = allRaces?.filter(r => r.competitorId === c.id && r.totalTime) || [];
+        const totalRaces = cRaces.length;
+
+        // Calculate podiums and best position requires knowing the rank within each event
+        // This is a bit heavy but accurate. simpler approach: check if we stored rank in race? 
+        // In db.ts Race has 'rank'. We need to ensure rank is populated when race finishes or event finishes.
+        // Assuming 'rank' in Race might not be reliable if not strictly maintained.
+        // Let's recalculate ranks for events belonging to this competitor's races.
+
+        let podiums = 0;
+        let bestPosition = 999;
+
+        cRaces.forEach(race => {
+            // Find all races for this event to determine rank
+            const eventRaces = allRaces?.filter(r => r.eventId === race.eventId && r.totalTime) || [];
+            eventRaces.sort((a, b) => (a.totalTime || 0) - (b.totalTime || 0));
+            const rank = eventRaces.findIndex(r => r.id === race.id) + 1;
+
+            if (rank > 0) {
+                if (rank <= 3) podiums++;
+                if (rank < bestPosition) bestPosition = rank;
+            }
+        });
+
+        return {
+            ...c,
+            totalRaces,
+            podiums,
+            bestPosition: bestPosition === 999 ? undefined : bestPosition
+        };
+    });
 
     return (
         <div className="space-y-6">

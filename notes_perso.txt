@@ -1,0 +1,11 @@
+reste a faire 
+Regler les quelques petits problemes et bugs des stats
+changer attributions des Points
+changer fond d'ecran
+rajouter les temps de Ski
+tour de penalité = environ 6 secondes donc 
+je peux aussi calculer le temps de tir 
+
+
+nouvelle regle : si dans une saison on a plus de 10 courses prit en compte alors on ne prend en compte que les 10 meilleures courses
+dans tous les cas 
