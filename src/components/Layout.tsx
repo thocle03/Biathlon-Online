@@ -22,9 +22,9 @@ const NavItem = ({ to, icon: Icon, label }: { to: string; icon: React.ElementTyp
 
 export const Layout = () => {
     return (
-        <div className="flex h-screen bg-slate-900 text-slate-100 overflow-hidden bg-[url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
+        <div className="flex h-screen bg-slate-900 text-slate-100 overflow-hidden bg-[url('/biathlon_bg.png')] bg-cover bg-center">
             {/* Overlay for readability */}
-            <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" />
 
             {/* Sidebar */}
             <aside className="relative z-10 w-64 h-full border-r border-white/10 bg-slate-900/40 backdrop-blur-md flex flex-col p-6">

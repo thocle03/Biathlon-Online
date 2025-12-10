@@ -135,42 +135,6 @@ export const Stats = () => {
                 </div>
             )}
 
-            <div className="glass-panel rounded-2xl overflow-hidden">
-                <table className="w-full text-left">
-                    <thead className="bg-white/5 text-slate-400 font-medium">
-                        <tr>
-                            <th className="p-4">Rang</th>
-                            <th className="p-4">Concurrent</th>
-                            <th className="p-4 text-center">Courses</th>
-                            <th className="p-4 text-center">Podiums</th>
-                            <th className="p-4 text-right">Points</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-white/5">
-                        {competitorStats.map((stat, idx) => (
-                            <tr
-                                key={stat.id}
-                                onClick={() => navigate(`/competitors/${stat.id}`)}
-                                className="hover:bg-white/5 transition-colors cursor-pointer"
-                            >
-                                <td className="p-4 font-mono text-slate-400">#{idx + 1}</td>
-                                <td className="p-4 font-medium">{stat.name}</td>
-                                <td className="p-4 text-center text-slate-400">{stat.racesCount}</td>
-                                <td className="p-4 text-center text-slate-400">{stat.podiums}</td>
-                                <td className="p-4 text-right font-bold text-yellow-500">{stat.totalPoints}</td>
-                            </tr>
-                        ))}
-                        {competitorStats.length === 0 && (
-                            <tr>
-                                <td colSpan={5} className="p-8 text-center text-slate-500">
-                                    Aucun concurrent classé.
-                                </td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Best Times Overall */}
                 <div className="glass-panel p-6 rounded-2xl">
@@ -240,6 +204,42 @@ export const Stats = () => {
                         {currentPeriodRaces.length === 0 && <p className="text-slate-500 text-sm italic">Pas de données de tir.</p>}
                     </div>
                 </div>
+            </div>
+
+            <div className="glass-panel rounded-2xl overflow-hidden">
+                <table className="w-full text-left">
+                    <thead className="bg-white/5 text-slate-400 font-medium">
+                        <tr>
+                            <th className="p-4">Rang</th>
+                            <th className="p-4">Concurrent</th>
+                            <th className="p-4 text-center">Courses</th>
+                            <th className="p-4 text-center">Podiums</th>
+                            <th className="p-4 text-right">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/5">
+                        {competitorStats.map((stat, idx) => (
+                            <tr
+                                key={stat.id}
+                                onClick={() => navigate(`/competitors/${stat.id}`)}
+                                className="hover:bg-white/5 transition-colors cursor-pointer"
+                            >
+                                <td className="p-4 font-mono text-slate-400">#{idx + 1}</td>
+                                <td className="p-4 font-medium">{stat.name}</td>
+                                <td className="p-4 text-center text-slate-400">{stat.racesCount}</td>
+                                <td className="p-4 text-center text-slate-400">{stat.podiums}</td>
+                                <td className="p-4 text-right font-bold text-yellow-500">{stat.totalPoints}</td>
+                            </tr>
+                        ))}
+                        {competitorStats.length === 0 && (
+                            <tr>
+                                <td colSpan={5} className="p-8 text-center text-slate-500">
+                                    Aucun concurrent classé.
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
             </div>
         </div>
     );
