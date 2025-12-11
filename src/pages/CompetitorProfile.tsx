@@ -276,13 +276,13 @@ export const CompetitorProfile = () => {
                     </div>
                 </>
             ) : (
-                <SkiAnalysisView races={filteredRaces} allEvents={allEvents} />
+                <SkiAnalysisView races={filteredRaces} allEvents={allEvents} navigate={navigate} />
             )}
         </div>
     );
 };
 
-const SkiAnalysisView = ({ races, allEvents }: { races: any[], allEvents: any[] }) => {
+const SkiAnalysisView = ({ races, allEvents, navigate }: { races: any[], allEvents: any[], navigate: any }) => {
     // Calculate Ski Times
     const data = races.map(race => {
         if (!race.splits.shoot1 || !race.splits.lap1 || !race.splits.shoot2 || !race.splits.lap2 || !race.totalTime) return null;
@@ -345,7 +345,11 @@ const SkiAnalysisView = ({ races, allEvents }: { races: any[], allEvents: any[] 
                     </thead>
                     <tbody className="divide-y divide-white/5">
                         {data.map((row, idx) => (
-                            <tr key={row!.id} className="hover:bg-white/5 transition-colors">
+                            <tr
+                                key={row!.id}
+                                onClick={() => navigate(`/competitors/${races[0].competitorId}/analysis/${row!.id}`)}
+                                className="hover:bg-white/10 transition-colors cursor-pointer"
+                            >
                                 <td className="p-4 font-bold text-slate-500">{idx + 1}</td>
                                 <td className="p-4">
                                     <div className="font-medium text-white">{row!.eventName}</div>
