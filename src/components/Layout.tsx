@@ -40,7 +40,20 @@ export const Layout = () => {
                 <nav className="flex-1 space-y-2">
                     <NavItem to="/" icon={LayoutDashboard} label="Tableau de bord" />
                     <NavItem to="/competitors" icon={Users} label="Concurrents" />
-                    <NavItem to="/events" icon={Timer} label="Événements" />
+
+                    {/* Event Types */}
+                    <div className="pt-4 pb-2">
+                        <div className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                            Événements
+                        </div>
+                        <div className="space-y-1">
+                            <NavItem to="/events/sprint" icon={Timer} label="Sprint" />
+                            <NavItem to="/events/pursuit" icon={Timer} label="Poursuite" />
+                            <NavItem to="/events/relay" icon={Timer} label="Relais" />
+                            <NavItem to="/events/individual" icon={Timer} label="Individuel" />
+                        </div>
+                    </div>
+
                     <NavItem to="/stats" icon={Trophy} label="Statistiques" />
                 </nav>
 

@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, Save, Shuffle, Users } from 'lucide-react';
-import { db, type Competitor } from '../db/db';
+import { db, type Competitor, type RaceMode } from '../db/db';
 import toast from 'react-hot-toast';
 
 interface Duel {
     p1: Competitor;
-    p2?: Competitor; // Can be undefined if odd number
+    p2?: Competitor; // Can be undefined if odd number or solo mode
 }
 
 export const EventCreate = () => {
@@ -17,6 +17,7 @@ export const EventCreate = () => {
     const [name, setName] = useState('');
     const [date, setDate] = useState('2025-08-14');
     const [level, setLevel] = useState(1);
+    const [type, setType] = useState<RaceMode>('sprint');
     const [selectedIds, setSelectedIds] = useState<number[]>([]);
     const [duels, setDuels] = useState<Duel[]>([]);
     const [step, setStep] = useState<1 | 2>(1); // 1: Select, 2: Pair
@@ -30,21 +31,33 @@ export const EventCreate = () => {
     };
 
     const generateDuels = () => {
-        if (selectedIds.length < 2) {
-            toast.error("Sélectionnez au moins 2 concurrents");
+        if (selectedIds.length < 1) {
+            toast.error("Sélectionnez au moins 1 concurrent");
             return;
         }
 
         const selectedCompetitors = competitors?.filter(c => c.id && selectedIds.includes(c.id)) || [];
-        // Shuffle
-        const shuffled = [...selectedCompetitors].sort(() => Math.random() - 0.5);
         const newDuels: Duel[] = [];
 
-        for (let i = 0; i < shuffled.length; i += 2) {
-            newDuels.push({
-                p1: shuffled[i],
-                p2: shuffled[i + 1] // might be undefined
+        if (type === 'pursuit' || type === 'relay') {
+            // List mode
+            selectedCompetitors.forEach(c => {
+                newDuels.push({ p1: c, p2: undefined });
             });
+        } else {
+            // Pair mode (Sprint / Individual)
+            if (selectedIds.length < 2) {
+                // If only 1 selected but pair mode, just add as solo
+                newDuels.push({ p1: selectedCompetitors[0] });
+            } else {
+                const shuffled = [...selectedCompetitors].sort(() => Math.random() - 0.5);
+                for (let i = 0; i < shuffled.length; i += 2) {
+                    newDuels.push({
+                        p1: shuffled[i],
+                        p2: shuffled[i + 1] // might be undefined
+                    });
+                }
+            }
         }
 
         setDuels(newDuels);
@@ -62,25 +75,16 @@ export const EventCreate = () => {
                 name,
                 date: new Date(date),
                 level,
-                status: 'active'
+                status: 'active',
+                type: type
             });
-
-            // Create Races for Duels
-            // Note: We need to define how to store races. 
-            // For now, let's assume a race is a "Duel" interaction effectively? 
-            // Or we create 2 Race entries per duel?
-            // "Course en duel" implies they run together. 
-            // Let's create two race entries linked by some common ID or just separate races that happen to be displayed together?
-            // The requirement says "1 contre 1... sur un parcours".
-
-            // Let's store them as individual Race entries but maybe we link them by `opponentId`.
 
             const racePromises = duels.flatMap(duel => {
                 const race1 = {
                     eventId: eventId as number,
                     competitorId: duel.p1.id!,
                     opponentId: duel.p2?.id,
-                    mode: 'sprint' as const,
+                    mode: type,
                     splits: {},
                     shooting1: { errors: 0 },
                     shooting2: { errors: 0 },
@@ -94,7 +98,7 @@ export const EventCreate = () => {
                         eventId: eventId as number,
                         competitorId: duel.p2.id!,
                         opponentId: duel.p1.id,
-                        mode: 'sprint' as const,
+                        mode: type,
                         splits: {},
                         shooting1: { errors: 0 },
                         shooting2: { errors: 0 },
@@ -152,6 +156,20 @@ export const EventCreate = () => {
                         </div>
 
                         <div>
+                            <label className="block text-sm font-medium text-slate-400 mb-1">Type de course</label>
+                            <select
+                                value={type}
+                                onChange={e => setType(e.target.value as any)}
+                                className="w-full px-4 py-2 bg-slate-800 border border-white/10 rounded-lg"
+                            >
+                                <option value="sprint">Sprint (Duel)</option>
+                                <option value="individual">Individuel (Duel)</option>
+                                <option value="pursuit">Poursuite (Liste)</option>
+                                <option value="relay">Relais (Liste)</option>
+                            </select>
+                        </div>
+
+                        <div>
                             <label className="block text-sm font-medium text-slate-400 mb-1">Niveau (Points)</label>
                             <select
                                 value={level}
@@ -194,11 +212,11 @@ export const EventCreate = () => {
 
                         <button
                             onClick={generateDuels}
-                            disabled={selectedIds.length < 2 || !name}
+                            disabled={selectedIds.length < 1 || !name}
                             className="w-full mt-6 py-3 bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-medium flex items-center justify-center gap-2 transition-all"
                         >
                             <Shuffle className="w-4 h-4" />
-                            Générer les duels
+                            {type === 'pursuit' || type === 'relay' ? 'Générer la liste' : 'Générer les duels'}
                         </button>
                     </div>
                 </div>
@@ -208,15 +226,21 @@ export const EventCreate = () => {
                 <div className="glass-panel p-6 rounded-2xl animate-in fade-in slide-in-from-bottom-4">
                     <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
                         <Users className="w-5 h-5 text-blue-400" />
-                        Duels Générés
+                        {type === 'pursuit' || type === 'relay' ? 'Liste de départ' : 'Duels Générés'}
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {duels.map((duel, idx) => (
                             <div key={idx} className="bg-slate-800/50 border border-white/5 p-4 rounded-xl flex items-center justify-between">
                                 <span className="font-medium text-white">{duel.p1.name}</span>
-                                <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">VS</span>
-                                <span className="font-medium text-white">{duel.p2 ? duel.p2.name : <em className="text-slate-500">Solo</em>}</span>
+                                {duel.p2 ? (
+                                    <>
+                                        <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">VS</span>
+                                        <span className="font-medium text-white">{duel.p2.name}</span>
+                                    </>
+                                ) : (
+                                    <em className="text-slate-500 text-sm">Solo</em>
+                                )}
                             </div>
                         ))}
                     </div>

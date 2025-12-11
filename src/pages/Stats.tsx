@@ -13,12 +13,13 @@ export const Stats = () => {
 
     if (!competitors || !events || !allRaces) return null;
 
-    // Filter logic
-    const availableYears = Array.from(new Set(events.map(e => new Date(e.date).getFullYear()))).sort((a, b) => b - a);
+    // Filter logic - Only Sprint events count for statistics
+    const sprintEvents = events.filter(e => !e.type || e.type === 'sprint');
+    const availableYears = Array.from(new Set(sprintEvents.map(e => new Date(e.date).getFullYear()))).sort((a, b) => b - a);
 
     const filteredEvents = selectedYear === 'all'
-        ? events
-        : events.filter(e => new Date(e.date).getFullYear() === selectedYear);
+        ? sprintEvents
+        : sprintEvents.filter(e => new Date(e.date).getFullYear() === selectedYear);
 
     // Calculate Global Standings based on filteredEvents
     const eventRankings = new Map<number, { competitorId: number; rank: number; points: number }[]>();
