@@ -26,11 +26,12 @@ export const Stats = () => {
 
     // Points system config
     const POINTS_SYSTEM = {
+        0: [5, 3, 1], // Level 0 - Only top 3
         1: [10, 6, 4, 2, 1], // Level 1
         2: [20, 12, 8, 4, 2], // Level 2
-        3: [50, 30, 20, 10, 5],
-        4: [100, 60, 40, 20, 10],
-        5: [200, 120, 80, 40, 20]
+        3: [50, 30, 20, 10, 5], // Level 3
+        4: [100, 60, 40, 20, 10, 8, 6, 4], // Level 4 - Top 8
+        5: [200, 120, 80, 40, 20, 16, 12, 8, 6, 4] // Level 5 - Top 10
     };
 
     filteredEvents.forEach(event => {

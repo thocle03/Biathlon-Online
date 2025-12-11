@@ -176,11 +176,12 @@ export const EventCreate = () => {
                                 onChange={e => setLevel(Number(e.target.value))}
                                 className="w-full px-4 py-2 bg-slate-800 border border-white/10 rounded-lg"
                             >
-                                <option value={1}>Niveau 1 (10 pts)</option>
-                                <option value={2}>Niveau 2 (20 pts)</option>
-                                <option value={3}>Niveau 3 (50 pts)</option>
-                                <option value={4}>Niveau 4 (100 pts)</option>
-                                <option value={5}>Niveau 5 (200 pts)</option>
+                                <option value={0}>Niveau 0 (5 pts - Top 3)</option>
+                                <option value={1}>Niveau 1 (10 pts - Top 5)</option>
+                                <option value={2}>Niveau 2 (20 pts - Top 5)</option>
+                                <option value={3}>Niveau 3 (50 pts - Top 5)</option>
+                                <option value={4}>Niveau 4 (100 pts - Top 8)</option>
+                                <option value={5}>Niveau 5 (200 pts - Top 10)</option>
                             </select>
                         </div>
                     </div>
