@@ -54,7 +54,20 @@ export const Layout = () => {
                         </div>
                     </div>
 
-                    <NavItem to="/stats" icon={Trophy} label="Statistiques" />
+                    {/* Statistics Types */}
+                    <div className="pt-4 pb-2">
+                        <div className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                            Statistiques
+                        </div>
+                        <div className="space-y-1">
+                            <NavItem to="/stats/general" icon={Trophy} label="Général" />
+                            <div className="border-t border-white/5 my-2" />
+                            <NavItem to="/stats/sprint" icon={Trophy} label="Sprint" />
+                            <NavItem to="/stats/pursuit" icon={Trophy} label="Poursuite" />
+                            <NavItem to="/stats/relay" icon={Trophy} label="Relais" />
+                            <NavItem to="/stats/individual" icon={Trophy} label="Individuel" />
+                        </div>
+                    </div>
                 </nav>
 
                 <div className="pt-6 border-t border-white/10">

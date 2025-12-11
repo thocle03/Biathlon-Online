@@ -15,6 +15,11 @@ import { Race } from './pages/Race';
 import { PursuitRace } from './pages/PursuitRace';
 import { ManualRaceEntry } from './pages/ManualRaceEntry';
 import { Stats } from './pages/Stats';
+import { GeneralStats } from './pages/GeneralStats';
+import { SprintStats } from './pages/SprintStats';
+import { PursuitStats } from './pages/PursuitStats';
+import { RelayStats } from './pages/RelayStats';
+import { IndividualStats } from './pages/IndividualStats';
 import { Settings } from './pages/Settings';
 
 function App() {
@@ -47,6 +52,11 @@ function App() {
           <Route path="race-mass/:id" element={<PursuitRace />} />
           <Route path="race/manual/:id" element={<ManualRaceEntry />} />
           <Route path="stats" element={<Stats />} />
+          <Route path="stats/general" element={<GeneralStats />} />
+          <Route path="stats/sprint" element={<SprintStats />} />
+          <Route path="stats/pursuit" element={<PursuitStats />} />
+          <Route path="stats/relay" element={<RelayStats />} />
+          <Route path="stats/individual" element={<IndividualStats />} />
           <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
