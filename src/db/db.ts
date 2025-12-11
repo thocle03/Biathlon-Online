@@ -20,6 +20,9 @@ export interface BiathlonEvent {
     status: EventStatus;
     type: RaceMode; // new field
     startTime?: number; // Master timer start
+    // Relay specific
+    team1?: number[]; // Array of competitor IDs in order
+    team2?: number[]; // Array of competitor IDs in order
 }
 
 export interface SplitTimes {
@@ -55,6 +58,10 @@ export interface Race {
     rank?: number;
     points?: number;
     startOffset?: number; // For Pursuit
+    // Relay specific
+    teamId?: number; // 1 or 2
+    passageNumber?: number; // Order in relay
+    teamTotalTime?: number; // Cumulative team time
 }
 
 export class BiathlonDB extends Dexie {
@@ -74,6 +81,12 @@ export class BiathlonDB extends Dexie {
             competitors: '++id, name',
             events: '++id, date, status, type',
             races: '++id, eventId, competitorId, rank'
+        });
+        // Version 3: Add relay support
+        this.version(3).stores({
+            competitors: '++id, name',
+            events: '++id, date, status, type',
+            races: '++id, eventId, competitorId, rank, teamId'
         });
     }
 }

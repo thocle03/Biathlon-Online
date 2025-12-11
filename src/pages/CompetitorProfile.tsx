@@ -20,12 +20,14 @@ export const CompetitorProfile = () => {
     // Years for filter
     const availableYears = Array.from(new Set(allEvents.map(e => new Date(e.date).getFullYear()))).sort((a, b) => b - a);
 
-    // Filter Logic
+    // Filter Logic - Only Sprint events for stats
     const competitorsRaces = allRacesInDb.filter(r => r.competitorId === compId && r.totalTime);
 
     const filteredRaces = competitorsRaces.filter(race => {
         const event = allEvents.find(e => e.id === race.eventId);
         if (!event) return false;
+        // Only include sprint events
+        if (event.type && event.type !== 'sprint') return false;
         if (selectedYear === 'all') return true;
         return new Date(event.date).getFullYear() === selectedYear;
     });

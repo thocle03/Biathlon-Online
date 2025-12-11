@@ -9,3 +9,10 @@ je peux aussi calculer le temps de tir
 
 nouvelle regle : si dans une saison on a plus de 10 courses prit en compte alors on ne prend en compte que les 10 meilleures courses
 dans tous les cas 
+
+
+
+je veux juste apres avoir creer des evenements avoir team 1 et team 2 puis pouvoir ajouter dedans tous les athletes que je veux puis ensuite que je fais dans interface pour demarrer le chrono j'ai donc a chaque fois lles temps comme je t'ai dit qui s'enchaine pour team 1 et team 2 et donc si par exemple j'ai 4 personnes dans chaque equipe (et je rappel que je peux ajouter plusieurs fois la meme personne dans une equipe) j'aurais donc 4 fois les chronos intermediaire de 1 tour puis 1 tir puis passage de relais et donc pas besoin finalement d'avoir des champs pour le tir je veux juste les chronos intermediaires et donc ensuite pas besoin de faire des stats sur du relais a par un classement avec les points gagné par chacun 
+
+revoir les temps bizarre qu’il me met apres avoir fini une course 
+stats en plus dans perso avoir un autre page avec tous ses meilleurs temps de tirs et de course repartis par années

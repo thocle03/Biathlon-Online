@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, Save, Shuffle, Users } from 'lucide-react';
 import { db, type Competitor, type RaceMode } from '../db/db';
+import { RelayTeamSetup } from '../components/RelayTeamSetup';
 import toast from 'react-hot-toast';
 
 interface Duel {
@@ -23,6 +24,10 @@ export const EventCreate = () => {
     const [selectedIds, setSelectedIds] = useState<number[]>([]);
     const [duels, setDuels] = useState<Duel[]>([]);
     const [step, setStep] = useState<1 | 2>(1); // 1: Select, 2: Pair
+
+    // Relay specific states
+    const [team1, setTeam1] = useState<number[]>([]);
+    const [team2, setTeam2] = useState<number[]>([]);
 
     const toggleSelection = (id: number) => {
         if (selectedIds.includes(id)) {
@@ -78,41 +83,80 @@ export const EventCreate = () => {
                 date: new Date(date),
                 level,
                 status: 'active',
-                type: type
+                type: type,
+                ...(type === 'relay' && { team1, team2 })
             });
 
-            const racePromises = duels.flatMap(duel => {
-                const race1 = {
-                    eventId: eventId as number,
-                    competitorId: duel.p1.id!,
-                    opponentId: duel.p2?.id,
-                    mode: type,
-                    splits: {},
-                    shooting1: { errors: 0 },
-                    shooting2: { errors: 0 },
-                    penaltyCount: 0,
-                };
+            if (type === 'relay') {
+                // Create races for relay
+                const racePromises: Promise<number>[] = [];
 
-                const promises = [db.races.add(race1)];
-
-                if (duel.p2) {
-                    const race2 = {
+                // Team 1
+                team1.forEach((competitorId, index) => {
+                    racePromises.push(db.races.add({
                         eventId: eventId as number,
-                        competitorId: duel.p2.id!,
-                        opponentId: duel.p1.id,
+                        competitorId,
+                        mode: 'relay',
+                        splits: {},
+                        shooting1: { errors: 0 },
+                        shooting2: { errors: 0 },
+                        penaltyCount: 0,
+                        teamId: 1,
+                        passageNumber: index + 1
+                    }));
+                });
+
+                // Team 2
+                team2.forEach((competitorId, index) => {
+                    racePromises.push(db.races.add({
+                        eventId: eventId as number,
+                        competitorId,
+                        mode: 'relay',
+                        splits: {},
+                        shooting1: { errors: 0 },
+                        shooting2: { errors: 0 },
+                        penaltyCount: 0,
+                        teamId: 2,
+                        passageNumber: index + 1
+                    }));
+                });
+
+                await Promise.all(racePromises);
+            } else {
+                // Existing code for other types
+                const racePromises = duels.flatMap(duel => {
+                    const race1 = {
+                        eventId: eventId as number,
+                        competitorId: duel.p1.id!,
+                        opponentId: duel.p2?.id,
                         mode: type,
                         splits: {},
                         shooting1: { errors: 0 },
                         shooting2: { errors: 0 },
                         penaltyCount: 0,
                     };
-                    promises.push(db.races.add(race2));
-                }
 
-                return promises;
-            });
+                    const promises = [db.races.add(race1)];
 
-            await Promise.all(racePromises);
+                    if (duel.p2) {
+                        const race2 = {
+                            eventId: eventId as number,
+                            competitorId: duel.p2.id!,
+                            opponentId: duel.p1.id,
+                            mode: type,
+                            splits: {},
+                            shooting1: { errors: 0 },
+                            shooting2: { errors: 0 },
+                            penaltyCount: 0,
+                        };
+                        promises.push(db.races.add(race2));
+                    }
+
+                    return promises;
+                });
+
+                await Promise.all(racePromises);
+            }
 
             toast.success("Événement créé !");
             navigate(`/events/${eventId}`);
@@ -125,7 +169,7 @@ export const EventCreate = () => {
     return (
         <div className="space-y-8 max-w-4xl mx-auto">
             <div className="flex items-center gap-4">
-                <button onClick={() => navigate('/events')} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                <button onClick={() => navigate(`/events/${type}`)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
                     <ArrowLeft className="w-6 h-6" />
                 </button>
                 <h1 className="text-3xl font-bold">Nouvel Événement</h1>

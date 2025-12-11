@@ -155,7 +155,7 @@ export const EventDashboard = () => {
         <div className="space-y-8">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <button onClick={() => navigate('/events')} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
+                    <button onClick={() => navigate(`/events/${event.type || 'sprint'}`)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
                         <ArrowLeft className="w-6 h-6" />
                     </button>
                     <div>
