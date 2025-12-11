@@ -21,6 +21,7 @@ export const EventDashboard = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [editName, setEditName] = useState('');
     const [editDate, setEditDate] = useState('');
+    const [editLevel, setEditLevel] = useState(1);
 
     // Add Duel State
     const [isAddDuelOpen, setIsAddDuelOpen] = useState(false);
@@ -34,6 +35,7 @@ export const EventDashboard = () => {
     const startEditing = () => {
         setEditName(event.name);
         setEditDate(new Date(event.date).toISOString().split('T')[0]);
+        setEditLevel(event.level);
         setIsEditing(true);
     };
 
@@ -44,7 +46,8 @@ export const EventDashboard = () => {
         }
         await db.events.update(eventId, {
             name: editName,
-            date: new Date(editDate)
+            date: new Date(editDate),
+            level: editLevel
         });
         setIsEditing(false);
         toast.success("Modifications enregistrées");
@@ -161,6 +164,18 @@ export const EventDashboard = () => {
                                 <input value={editName} onChange={e => setEditName(e.target.value)} className="text-3xl font-bold bg-slate-800 border border-white/10 rounded px-2 py-1 w-full" />
                                 <div className="flex items-center gap-2">
                                     <input type="date" value={editDate} onChange={e => setEditDate(e.target.value)} className="bg-slate-800 border border-white/10 rounded px-2 py-1 text-sm text-slate-300" />
+                                    <select
+                                        value={editLevel}
+                                        onChange={e => setEditLevel(Number(e.target.value))}
+                                        className="bg-slate-800 border border-white/10 rounded px-2 py-1 text-sm text-slate-300"
+                                    >
+                                        <option value={0}>Niveau 0</option>
+                                        <option value={1}>Niveau 1</option>
+                                        <option value={2}>Niveau 2</option>
+                                        <option value={3}>Niveau 3</option>
+                                        <option value={4}>Niveau 4</option>
+                                        <option value={5}>Niveau 5</option>
+                                    </select>
                                     <button onClick={saveDetails} className="p-1 bg-green-500/20 text-green-500 rounded hover:bg-green-500 hover:text-white transition-colors"><Save className="w-4 h-4" /></button>
                                 </div>
                             </div>
