@@ -55,17 +55,21 @@ export const ManualRaceEntry = () => {
 
     useEffect(() => {
         if (race && race.splits) {
-            if (race.splits.lap1) setLap1(formatTimeInput(race.splits.lap1));
-            // Shoot split in DB is usually cumulative from start. 
-            // Manual entry usually implies "Time spent in Lap 1", "Time spent in Lap 2".
-            // However, our data model stores CUMULATIVE timestamps (splits).
-            // Users usually have "Lap Times" or "Split Times".
-            // "Temps intermediaire" usually means cumulative time at a checkpoint. 
-            // I will assume they enter CUMULATIVE times.
-            if (race.splits.shoot1) setShoot1Time(formatTimeInput(race.splits.shoot1));
-            if (race.splits.lap2) setLap2(formatTimeInput(race.splits.lap2));
-            if (race.splits.shoot2) setShoot2Time(formatTimeInput(race.splits.shoot2));
-            if (race.splits.finish) setFinish(formatTimeInput(race.splits.finish));
+            const start = race.splits.start || 0;
+
+            // Function to get duration from potentially absolute timestamp
+            // If start exists and val > start, it's likely an absolute timestamp
+            const getDuration = (val: number | undefined) => {
+                if (!val) return undefined;
+                if (start > 0 && val > start) return val - start;
+                return val; // Assumption: if it's small, it's already a duration, or start is missing
+            };
+
+            if (race.splits.lap1) setLap1(formatTimeInput(getDuration(race.splits.lap1)));
+            if (race.splits.shoot1) setShoot1Time(formatTimeInput(getDuration(race.splits.shoot1)));
+            if (race.splits.lap2) setLap2(formatTimeInput(getDuration(race.splits.lap2)));
+            if (race.splits.shoot2) setShoot2Time(formatTimeInput(getDuration(race.splits.shoot2)));
+            if (race.splits.finish) setFinish(formatTimeInput(getDuration(race.splits.finish)));
         }
         if (race?.shooting1) setShoot1Errors(race.shooting1.errors);
         if (race?.shooting2) setShoot2Errors(race.shooting2.errors);
@@ -82,11 +86,19 @@ export const ManualRaceEntry = () => {
         const s2 = parseTimeInput(shoot2Time);
         const fin = parseTimeInput(finish);
 
-        if (l1 !== null) splits.lap1 = l1;
-        if (s1 !== null) splits.shoot1 = s1;
-        if (l2 !== null) splits.lap2 = l2;
-        if (s2 !== null) splits.shoot2 = s2;
-        if (fin !== null) splits.finish = fin;
+        // If we have a start time, we need to convert these durations back to absolute timestamps
+        const start = race.splits.start || 0;
+        const toAbsolute = (duration: number | null) => {
+            if (duration === null) return undefined;
+            if (start > 0) return start + duration;
+            return duration;
+        };
+
+        if (l1 !== null) splits.lap1 = toAbsolute(l1);
+        if (s1 !== null) splits.shoot1 = toAbsolute(s1);
+        if (l2 !== null) splits.lap2 = toAbsolute(l2);
+        if (s2 !== null) splits.shoot2 = toAbsolute(s2);
+        if (fin !== null) splits.finish = toAbsolute(fin);
 
         await db.races.update(raceId, {
             splits,
