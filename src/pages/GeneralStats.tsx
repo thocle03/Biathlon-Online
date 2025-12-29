@@ -88,6 +88,8 @@ export const GeneralStats = () => {
     // Sort by points
     competitorStats.sort((a, b) => {
         if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
+        if (b.wins !== a.wins) return b.wins - a.wins;
+        if (b.podiums !== a.podiums) return b.podiums - a.podiums;
         return a.name.localeCompare(b.name);
     });
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Globe, Crown, ArrowLeft } from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
@@ -77,7 +77,12 @@ export const GlobalRankings = () => {
             });
 
             return { ...c, totalPoints, wins, podiums };
-        }).filter(c => c.totalPoints > 0).sort((a, b) => b.totalPoints - a.totalPoints);
+        }).filter(c => c.totalPoints > 0).sort((a, b) => {
+            if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
+            if (b.wins !== a.wins) return b.wins - a.wins;
+            if (b.podiums !== a.podiums) return b.podiums - a.podiums;
+            return a.name.localeCompare(b.name);
+        });
 
         return { stats, availableYears };
     };
