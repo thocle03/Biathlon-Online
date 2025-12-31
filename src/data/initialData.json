@@ -1,0 +1,4770 @@
+{
+  "version": 1,
+  "date": "2025-12-31T18:22:41.154Z",
+  "competitors": [
+    {
+      "name": "Thomas Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 1
+    },
+    {
+      "name": "Romain Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 2
+    },
+    {
+      "name": "Damien Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 3
+    },
+    {
+      "name": "Simon Ambroise",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 4
+    },
+    {
+      "name": "Cyrian Flasque",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 5
+    },
+    {
+      "name": "Loan Flasque",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 6
+    },
+    {
+      "name": "Sylvain Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 7
+    },
+    {
+      "name": "Laurine Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 8
+    },
+    {
+      "name": "Florence Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 9
+    },
+    {
+      "name": "Eloise Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 10
+    },
+    {
+      "name": "Xavier Andrieux",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 11
+    },
+    {
+      "name": "Antoine Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 12
+    },
+    {
+      "name": "Marion Andrieux",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 13
+    },
+    {
+      "name": "Titouan Andrieux",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 14
+    },
+    {
+      "name": "Caroline Clerc",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 15
+    },
+    {
+      "name": "Elouan",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 16
+    },
+    {
+      "name": "Paulin",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 17
+    },
+    {
+      "name": "Enora",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 18
+    },
+    {
+      "name": "Louis",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 19
+    },
+    {
+      "name": "Ulysse",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 20
+    },
+    {
+      "name": "Florien",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 21
+    },
+    {
+      "name": "Fabien",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 22
+    },
+    {
+      "name": "Mathis",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 23
+    },
+    {
+      "name": "Johanna",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 24
+    },
+    {
+      "name": "Mathilde",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 25
+    },
+    {
+      "name": "Maxime",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 26
+    },
+    {
+      "name": "Mathéo",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 27
+    },
+    {
+      "name": "Paul",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 28
+    },
+    {
+      "name": "Ethan",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 29
+    },
+    {
+      "name": "Floria",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 30
+    },
+    {
+      "name": "Nina",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 31
+    },
+    {
+      "name": "Jorice",
+      "totalRaces": 0,
+      "podiums": 0,
+      "id": 32
+    }
+  ],
+  "events": [
+    {
+      "name": "Etape 1 Circuit 2021",
+      "date": "2021-03-10T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 2,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 2 Circuit 2021",
+      "date": "2021-04-10T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 3,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 3 Circuit 2021",
+      "date": "2021-04-14T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 4,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Saison 2021 exhibition 1 ",
+      "date": "2021-04-16T00:00:00.000Z",
+      "level": 1,
+      "status": "active",
+      "id": 5,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Saison 2021 exhibition 2",
+      "date": "2021-05-04T00:00:00.000Z",
+      "level": 1,
+      "status": "active",
+      "id": 6,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 4 Circuit 2021 Majeur",
+      "date": "2021-05-06T00:00:00.000Z",
+      "level": 4,
+      "status": "active",
+      "id": 7,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 5 Circuit 2021 Majeur",
+      "date": "2021-05-14T00:00:00.000Z",
+      "level": 4,
+      "status": "active",
+      "id": 9,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 6 Circuit 2021 Majeur",
+      "date": "2021-05-17T00:00:00.000Z",
+      "level": 4,
+      "status": "active",
+      "id": 10,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 7 Circuit 2021 ",
+      "date": "2021-05-20T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 11,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Saison 2021 exhibition 2",
+      "date": "2021-06-01T00:00:00.000Z",
+      "level": 1,
+      "status": "active",
+      "id": 12,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 8 Circuit 2021 WORLD CUP",
+      "date": "2021-06-04T00:00:00.000Z",
+      "level": 5,
+      "status": "active",
+      "id": 13,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 9 circuit 2021 Major",
+      "date": "2021-06-20T00:00:00.000Z",
+      "level": 4,
+      "status": "active",
+      "id": 14,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 1 circuit 2022",
+      "date": "2022-04-14T00:00:00.000Z",
+      "level": 2,
+      "status": "active",
+      "id": 15,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 2 circuit 2022 ",
+      "date": "2022-04-18T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 17,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 3 circuit 2022",
+      "date": "2022-04-20T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 18,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 4 circuit 2022 WOLRD CUP",
+      "date": "2022-05-14T00:00:00.000Z",
+      "level": 4,
+      "status": "active",
+      "id": 19,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 1 circuit 2023",
+      "date": "2023-03-22T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 20,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 2 circuit 2023",
+      "date": "2023-06-10T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 21,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Etape 3 circuit 2023",
+      "date": "2023-12-23T00:00:00.000Z",
+      "level": 3,
+      "status": "active",
+      "id": 22,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Test présaison",
+      "date": "2025-12-10T00:00:00.000Z",
+      "level": 0,
+      "status": "active",
+      "type": "sprint",
+      "id": 29,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Night Session",
+      "date": "2025-12-11T00:00:00.000Z",
+      "level": 2,
+      "status": "active",
+      "type": "sprint",
+      "id": 39,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Saison 2025 last race",
+      "date": "2025-12-14T00:00:00.000Z",
+      "level": 2,
+      "status": "active",
+      "type": "sprint",
+      "id": 40,
+      "location": "Feucherolles"
+    },
+    {
+      "name": "Meribel 2025",
+      "date": "2025-12-20T00:00:00.000Z",
+      "level": 1,
+      "status": "active",
+      "type": "sprint",
+      "location": "Meribel",
+      "id": 42
+    },
+    {
+      "name": "Poursuite des freres Meribel 2025",
+      "date": "2025-12-21T00:00:00.000Z",
+      "level": 0,
+      "status": "active",
+      "type": "pursuit",
+      "location": "Meribel",
+      "id": 43,
+      "startTime": 1766918936550
+    },
+    {
+      "name": "Meribel 2025 noel",
+      "date": "2025-12-28T00:00:00.000Z",
+      "level": 0,
+      "status": "active",
+      "type": "sprint",
+      "location": "Meribel",
+      "id": 48
+    },
+    {
+      "name": "Meribel 2025 nouvel an",
+      "date": "2025-12-29T00:00:00.000Z",
+      "level": 0,
+      "status": "active",
+      "type": "sprint",
+      "location": "Meribel",
+      "id": 49
+    },
+    {
+      "name": "Meribel 2025 last race",
+      "date": "2025-12-31T00:00:00.000Z",
+      "level": 0,
+      "status": "active",
+      "type": "sprint",
+      "location": "Meribel",
+      "id": 50
+    }
+  ],
+  "races": [
+    {
+      "eventId": 2,
+      "competitorId": 1,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 65000,
+        "shoot1": 93000,
+        "lap2": 172000,
+        "shoot2": 199000,
+        "finish": 277000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 4,
+      "totalTime": 277000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 2,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 86000,
+        "shoot1": 152000,
+        "lap2": 256000,
+        "shoot2": 295000,
+        "finish": 381000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 5,
+      "id": 5,
+      "totalTime": 381000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 4,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 64000,
+        "shoot1": 102000,
+        "lap2": 174000,
+        "shoot2": 273000,
+        "finish": 347000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 5,
+      "id": 6,
+      "totalTime": 347000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 8,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 108000,
+        "shoot1": 200000,
+        "lap2": 295000,
+        "shoot2": 330000,
+        "finish": 465000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 5,
+      "id": 7,
+      "totalTime": 465000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 10,
+      "opponentId": 9,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 95000,
+        "shoot1": 155000,
+        "lap2": 257000,
+        "shoot2": 320000,
+        "finish": 418000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 8,
+      "totalTime": 418000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 9,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 95000,
+        "shoot1": 200000,
+        "lap2": 295000,
+        "shoot2": 363000,
+        "finish": 456000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 5,
+      "id": 9,
+      "totalTime": 456000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 5,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 74000,
+        "shoot1": 134000,
+        "lap2": 224000,
+        "shoot2": 275000,
+        "finish": 360000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 6,
+      "id": 10,
+      "totalTime": 360000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 6,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 90000,
+        "lap2": 170000,
+        "shoot2": 218000,
+        "finish": 295000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 11,
+      "totalTime": 295000
+    },
+    {
+      "eventId": 2,
+      "competitorId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 93000,
+        "shoot1": 164000,
+        "lap2": 274000,
+        "shoot2": 318000,
+        "finish": 416000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 4,
+      "id": 12,
+      "totalTime": 416000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 10,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 98000,
+        "shoot1": 155000,
+        "lap2": 265000,
+        "shoot2": 340000,
+        "finish": 437000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 5,
+      "id": 13,
+      "totalTime": 437000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 1,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 85000,
+        "lap2": 163000,
+        "shoot2": 204000,
+        "finish": 282000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 14,
+      "totalTime": 282000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 2,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 93000,
+        "shoot1": 120000,
+        "lap2": 215000,
+        "shoot2": 250000,
+        "finish": 340000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 15,
+      "totalTime": 340000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 6,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 72000,
+        "shoot1": 102000,
+        "lap2": 176000,
+        "shoot2": 213000,
+        "finish": 287000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 16,
+      "totalTime": 287000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 7,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 94000,
+        "shoot1": 162000,
+        "lap2": 275000,
+        "shoot2": 310000,
+        "finish": 412000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 5,
+      "id": 17,
+      "totalTime": 412000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 4,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 114000,
+        "lap2": 189000,
+        "shoot2": 234000,
+        "finish": 308000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 5,
+      "id": 18,
+      "totalTime": 308000
+    },
+    {
+      "eventId": 3,
+      "competitorId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 75000,
+        "shoot1": 111000,
+        "lap2": 197000,
+        "shoot2": 222000,
+        "finish": 298000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 19,
+      "totalTime": 298000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 15,
+      "opponentId": 11,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 105000,
+        "shoot1": 165000,
+        "lap2": 275000,
+        "shoot2": 360000,
+        "finish": 464000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 5,
+      "id": 20,
+      "totalTime": 464000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 11,
+      "opponentId": 15,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 79000,
+        "shoot1": 127000,
+        "lap2": 211000,
+        "shoot2": 275000,
+        "finish": 354000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 21,
+      "totalTime": 354000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 14,
+      "opponentId": 13,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 88000,
+        "shoot1": 160000,
+        "lap2": 253000,
+        "shoot2": 340000,
+        "finish": 423000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 22,
+      "totalTime": 423000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 13,
+      "opponentId": 14,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 81000,
+        "shoot1": 158000,
+        "lap2": 247000,
+        "shoot2": 338000,
+        "finish": 427000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 7,
+      "id": 23,
+      "totalTime": 427000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 2,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 86000,
+        "shoot1": 108000,
+        "lap2": 195000,
+        "shoot2": 232000,
+        "finish": 316000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 24,
+      "totalTime": 316000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 1,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 64000,
+        "shoot1": 80000,
+        "lap2": 160000,
+        "shoot2": 202000,
+        "finish": 283000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 25,
+      "totalTime": 283000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 12,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 76000,
+        "shoot1": 139000,
+        "lap2": 223000,
+        "shoot2": 272000,
+        "finish": 348000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 5,
+      "id": 26,
+      "totalTime": 348000
+    },
+    {
+      "eventId": 4,
+      "competitorId": 7,
+      "opponentId": 12,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 88000,
+        "shoot1": 123000,
+        "lap2": 225000,
+        "shoot2": 263000,
+        "finish": 359000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 27,
+      "totalTime": 359000
+    },
+    {
+      "eventId": 5,
+      "competitorId": 3,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 87000,
+        "shoot1": 107000,
+        "lap2": 196000,
+        "shoot2": 230000,
+        "finish": 318000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 28,
+      "totalTime": 318000
+    },
+    {
+      "eventId": 5,
+      "competitorId": 2,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 96000,
+        "shoot1": 130000,
+        "lap2": 220000,
+        "shoot2": 245000,
+        "finish": 318000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 29,
+      "totalTime": 318000
+    },
+    {
+      "eventId": 6,
+      "competitorId": 7,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 88000,
+        "shoot1": 147000,
+        "lap2": 248000,
+        "shoot2": 290000,
+        "finish": 389000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 5,
+      "id": 30,
+      "totalTime": 389000
+    },
+    {
+      "eventId": 6,
+      "competitorId": 10,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 92000,
+        "shoot1": 147000,
+        "lap2": 248000,
+        "shoot2": 296000,
+        "finish": 410000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 31,
+      "totalTime": 410000
+    },
+    {
+      "eventId": 6,
+      "competitorId": 2,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 80000,
+        "shoot1": 96000,
+        "lap2": 180000,
+        "shoot2": 206000,
+        "finish": 282000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 32,
+      "totalTime": 282000
+    },
+    {
+      "eventId": 6,
+      "competitorId": 1,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 85000,
+        "lap2": 163000,
+        "shoot2": 200000,
+        "finish": 278000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 33,
+      "totalTime": 278000
+    },
+    {
+      "eventId": 6,
+      "competitorId": 3,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 79000,
+        "shoot1": 95000,
+        "lap2": 186000,
+        "shoot2": 226000,
+        "finish": 316000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 34,
+      "totalTime": 316000
+    },
+    {
+      "eventId": 6,
+      "competitorId": 4,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 76000,
+        "shoot1": 110000,
+        "lap2": 185000,
+        "shoot2": 227000,
+        "finish": 303000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 4,
+      "id": 35,
+      "totalTime": 303000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 2,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 100000,
+        "lap2": 183000,
+        "shoot2": 217000,
+        "finish": 292000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 36,
+      "totalTime": 292000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 4,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 86000,
+        "lap2": 159000,
+        "shoot2": 202000,
+        "finish": 273000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 37,
+      "totalTime": 273000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 3,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 74000,
+        "shoot1": 88000,
+        "lap2": 176000,
+        "shoot2": 202000,
+        "finish": 285000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 38,
+      "totalTime": 285000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 1,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 62000,
+        "shoot1": 77000,
+        "lap2": 153000,
+        "shoot2": 182000,
+        "finish": 256000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 39,
+      "totalTime": 256000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 10,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 94000,
+        "shoot1": 120000,
+        "lap2": 222000,
+        "shoot2": 248000,
+        "finish": 352000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 40,
+      "totalTime": 352000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 5,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 101000,
+        "lap2": 184000,
+        "shoot2": 223000,
+        "finish": 308000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 4,
+      "id": 41,
+      "totalTime": 308000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 17,
+      "opponentId": 16,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 65000,
+        "shoot1": 87000,
+        "lap2": 160000,
+        "shoot2": 223000,
+        "finish": 293000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 42,
+      "totalTime": 293000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 16,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 66000,
+        "shoot1": 117000,
+        "lap2": 194000,
+        "shoot2": 238000,
+        "finish": 314000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 7,
+      "id": 43,
+      "totalTime": 314000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 18,
+      "opponentId": 19,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 86000,
+        "shoot1": 155000,
+        "lap2": 267000,
+        "shoot2": 347000,
+        "finish": 468000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 8,
+      "id": 44,
+      "totalTime": 468000
+    },
+    {
+      "eventId": 7,
+      "competitorId": 19,
+      "opponentId": 18,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 84000,
+        "shoot1": 133000,
+        "lap2": 231000,
+        "shoot2": 308000,
+        "finish": 408000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 45,
+      "totalTime": 408000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 8,
+      "opponentId": 20,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 105000,
+        "shoot1": 164000,
+        "lap2": 274000,
+        "shoot2": 315000,
+        "finish": 414000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 3,
+      "id": 48,
+      "totalTime": 414000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 20,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 79000,
+        "shoot1": 100000,
+        "lap2": 188000,
+        "shoot2": 241000,
+        "finish": 340000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 49,
+      "totalTime": 340000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 73000,
+        "shoot1": 95000,
+        "lap2": 176000,
+        "shoot2": 204000,
+        "finish": 281000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 50,
+      "totalTime": 281000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 62000,
+        "shoot1": 84000,
+        "lap2": 162000,
+        "shoot2": 200000,
+        "finish": 277000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 51,
+      "totalTime": 277000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 19,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 80000,
+        "shoot1": 104000,
+        "lap2": 193000,
+        "shoot2": 265000,
+        "finish": 370000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 52,
+      "totalTime": 370000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 17,
+      "opponentId": 19,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 71000,
+        "shoot1": 104000,
+        "lap2": 174000,
+        "shoot2": 230000,
+        "finish": 305000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 5,
+      "id": 53,
+      "totalTime": 305000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 4,
+      "opponentId": 21,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 86000,
+        "lap2": 157000,
+        "shoot2": 206000,
+        "finish": 278000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 54,
+      "totalTime": 278000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 21,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 131000,
+        "lap2": 203000,
+        "shoot2": 283000,
+        "finish": 359000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 55,
+      "totalTime": 359000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 2,
+      "opponentId": 23,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 72000,
+        "shoot1": 95000,
+        "lap2": 180000,
+        "shoot2": 210000,
+        "finish": 289000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 56,
+      "totalTime": 289000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 23,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 121000,
+        "lap2": 193000,
+        "shoot2": 250000,
+        "finish": 323000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 8,
+      "id": 57,
+      "totalTime": 323000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 22,
+      "opponentId": 18,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 120000,
+        "lap2": 245000,
+        "shoot2": 312000,
+        "finish": 403000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 9,
+      "id": 58,
+      "totalTime": 403000
+    },
+    {
+      "eventId": 9,
+      "competitorId": 18,
+      "opponentId": 22,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 85000,
+        "shoot1": 135000,
+        "lap2": 239000,
+        "shoot2": 319000,
+        "finish": 438000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 59,
+      "totalTime": 438000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 4,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 91000,
+        "lap2": 163000,
+        "shoot2": 199000,
+        "finish": 270000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 60,
+      "totalTime": 270000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 10,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 89000,
+        "shoot1": 117000,
+        "lap2": 215000,
+        "shoot2": 226000,
+        "finish": 328000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 61,
+      "totalTime": 328000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 19,
+      "opponentId": 20,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 84000,
+        "shoot1": 109000,
+        "lap2": 200000,
+        "shoot2": 245000,
+        "finish": 333000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 62,
+      "totalTime": 333000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 20,
+      "opponentId": 19,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 83000,
+        "shoot1": 130000,
+        "lap2": 225000,
+        "shoot2": 247000,
+        "finish": 331000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 3,
+      "id": 63,
+      "totalTime": 331000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 2,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 71000,
+        "shoot1": 94000,
+        "lap2": 177000,
+        "shoot2": 215000,
+        "finish": 292000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 64,
+      "totalTime": 292000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 17,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 70000,
+        "shoot1": 113000,
+        "lap2": 200000,
+        "shoot2": 226000,
+        "finish": 296000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 4,
+      "id": 65,
+      "totalTime": 296000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 72000,
+        "shoot1": 103000,
+        "lap2": 190000,
+        "shoot2": 217000,
+        "finish": 294000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 66,
+      "totalTime": 294000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 61000,
+        "shoot1": 77000,
+        "lap2": 155000,
+        "shoot2": 182000,
+        "finish": 260000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 67,
+      "totalTime": 260000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 23,
+      "opponentId": 21,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 64000,
+        "shoot1": 88000,
+        "lap2": 164000,
+        "shoot2": 217000,
+        "finish": 290000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 68,
+      "totalTime": 290000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 21,
+      "opponentId": 23,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 105000,
+        "lap2": 181000,
+        "shoot2": 232000,
+        "finish": 307000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 5,
+      "id": 69,
+      "totalTime": 307000
+    },
+    {
+      "eventId": 10,
+      "competitorId": 16,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 113000,
+        "lap2": 190000,
+        "shoot2": 234000,
+        "finish": 304000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 6,
+      "id": 70,
+      "totalTime": 304000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 2,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 75000,
+        "shoot1": 92000,
+        "lap2": 177000,
+        "shoot2": 195000,
+        "finish": 269000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 71,
+      "totalTime": 269000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 1,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 63000,
+        "shoot1": 78000,
+        "lap2": 158000,
+        "shoot2": 182000,
+        "finish": 262000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 72,
+      "totalTime": 262000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 6,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 101000,
+        "shoot1": 124000,
+        "lap2": 207000,
+        "shoot2": 259000,
+        "finish": 362000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 73,
+      "totalTime": 362000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 3,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 91000,
+        "lap2": 181000,
+        "shoot2": 197000,
+        "finish": 278000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 74,
+      "totalTime": 278000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 24,
+      "opponentId": 25,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 98000,
+        "shoot1": 148000,
+        "lap2": 266000,
+        "shoot2": 324000,
+        "finish": 422000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 75,
+      "totalTime": 422000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 25,
+      "opponentId": 24,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 99000,
+        "shoot1": 166000,
+        "lap2": 266000,
+        "shoot2": 333000,
+        "finish": 426000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 7,
+      "id": 76,
+      "totalTime": 426000
+    },
+    {
+      "eventId": 11,
+      "competitorId": 26,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 96000,
+        "lap2": 182000,
+        "shoot2": 232000,
+        "finish": 327000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 77,
+      "totalTime": 327000
+    },
+    {
+      "eventId": 12,
+      "competitorId": 2,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 81000,
+        "shoot1": 105000,
+        "lap2": 204000,
+        "shoot2": 276000,
+        "finish": 372000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 78,
+      "totalTime": 372000
+    },
+    {
+      "eventId": 12,
+      "competitorId": 3,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 83000,
+        "shoot1": 103000,
+        "lap2": 190000,
+        "shoot2": 222000,
+        "finish": 300000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 79,
+      "totalTime": 300000
+    },
+    {
+      "eventId": 12,
+      "competitorId": 13,
+      "opponentId": 14,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 83000,
+        "shoot1": 119000,
+        "lap2": 220000,
+        "shoot2": 298000,
+        "finish": 392000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 80,
+      "totalTime": 392000
+    },
+    {
+      "eventId": 12,
+      "competitorId": 14,
+      "opponentId": 13,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 92000,
+        "shoot1": 114000,
+        "lap2": 198000,
+        "shoot2": 228000,
+        "finish": 308000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 81,
+      "totalTime": 308000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 1,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 61000,
+        "shoot1": 77000,
+        "lap2": 155000,
+        "shoot2": 171000,
+        "finish": 244000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 82,
+      "totalTime": 244000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 10,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 86000,
+        "shoot1": 131000,
+        "lap2": 227000,
+        "shoot2": 280000,
+        "finish": 377000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 83,
+      "totalTime": 377000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 3,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 115000,
+        "lap2": 205000,
+        "shoot2": 237000,
+        "finish": 332000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 4,
+      "id": 84,
+      "totalTime": 332000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 5,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 84000,
+        "lap2": 169000,
+        "shoot2": 207000,
+        "finish": 286000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 85,
+      "totalTime": 286000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 8,
+      "opponentId": 25,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 101000,
+        "shoot1": 150000,
+        "lap2": 263000,
+        "shoot2": 324000,
+        "finish": 427000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 86,
+      "totalTime": 427000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 25,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 88000,
+        "shoot1": 155000,
+        "lap2": 257000,
+        "shoot2": 306000,
+        "finish": 404000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 6,
+      "id": 87,
+      "totalTime": 404000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 24,
+      "opponentId": 26,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 93000,
+        "shoot1": 158000,
+        "lap2": 265000,
+        "shoot2": 315000,
+        "finish": 423000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 7,
+      "id": 88,
+      "totalTime": 423000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 26,
+      "opponentId": 24,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 122000,
+        "lap2": 207000,
+        "shoot2": 240000,
+        "finish": 320000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 3,
+      "id": 89,
+      "totalTime": 320000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 4,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 63000,
+        "shoot1": 89000,
+        "lap2": 164000,
+        "shoot2": 197000,
+        "finish": 270000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 90,
+      "totalTime": 270000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 2,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 72000,
+        "shoot1": 86000,
+        "lap2": 165000,
+        "shoot2": 183000,
+        "finish": 256000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 91,
+      "totalTime": 256000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 7,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 85000,
+        "shoot1": 139000,
+        "lap2": 238000,
+        "shoot2": 275000,
+        "finish": 375000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 3,
+      "id": 92,
+      "totalTime": 375000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 6,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 62000,
+        "shoot1": 99000,
+        "lap2": 178000,
+        "shoot2": 221000,
+        "finish": 310000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 93,
+      "totalTime": 310000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 18,
+      "opponentId": 9,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 95000,
+        "shoot1": 140000,
+        "lap2": 244000,
+        "shoot2": 295000,
+        "finish": 400000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 6,
+      "id": 94,
+      "totalTime": 400000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 9,
+      "opponentId": 18,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 81000,
+        "shoot1": 150000,
+        "lap2": 237000,
+        "shoot2": 270000,
+        "finish": 356000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 5,
+      "id": 95,
+      "totalTime": 356000
+    },
+    {
+      "eventId": 13,
+      "competitorId": 19,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 84000,
+        "shoot1": 120000,
+        "lap2": 262000,
+        "shoot2": 300000,
+        "finish": 385000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 4,
+      "id": 96,
+      "totalTime": 385000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 9,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 84000,
+        "shoot1": 132000,
+        "lap2": 222000,
+        "shoot2": 264000,
+        "finish": 349000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 97,
+      "totalTime": 349000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 3,
+      "opponentId": 9,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 79000,
+        "shoot1": 97000,
+        "lap2": 181000,
+        "shoot2": 199000,
+        "finish": 281000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 98,
+      "totalTime": 281000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 24,
+      "opponentId": 18,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 125000,
+        "shoot1": 157000,
+        "lap2": 275000,
+        "shoot2": 335000,
+        "finish": 450000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 99,
+      "totalTime": 450000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 18,
+      "opponentId": 24,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 97000,
+        "shoot1": 152000,
+        "lap2": 258000,
+        "shoot2": 311000,
+        "finish": 418000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 7,
+      "id": 100,
+      "totalTime": 418000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 1,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 61000,
+        "shoot1": 98000,
+        "lap2": 171000,
+        "shoot2": 187000,
+        "finish": 267000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 101,
+      "totalTime": 267000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 6,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 63000,
+        "shoot1": 97000,
+        "lap2": 171000,
+        "shoot2": 195000,
+        "finish": 276000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 102,
+      "totalTime": 276000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 7,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 86000,
+        "shoot1": 126000,
+        "lap2": 226000,
+        "shoot2": 256000,
+        "finish": 352000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 103,
+      "totalTime": 352000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 10,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 97000,
+        "shoot1": 137000,
+        "lap2": 237000,
+        "shoot2": 288000,
+        "finish": 392000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 104,
+      "totalTime": 392000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 25,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 95000,
+        "shoot1": 139000,
+        "lap2": 232000,
+        "shoot2": 281000,
+        "finish": 374000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 105,
+      "totalTime": 374000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 17,
+      "opponentId": 25,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 107000,
+        "lap2": 179000,
+        "shoot2": 199000,
+        "finish": 271000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 3,
+      "id": 106,
+      "totalTime": 271000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 23,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 66000,
+        "shoot1": 106000,
+        "lap2": 177000,
+        "shoot2": 230000,
+        "finish": 305000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 8,
+      "id": 107,
+      "totalTime": 305000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 8,
+      "opponentId": 23,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 107000,
+        "shoot1": 159000,
+        "lap2": 275000,
+        "shoot2": 300000,
+        "finish": 396000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 108,
+      "totalTime": 396000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 2,
+      "opponentId": 26,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 75000,
+        "shoot1": 107000,
+        "lap2": 193000,
+        "shoot2": 212000,
+        "finish": 279000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 109,
+      "totalTime": 279000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 26,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 119000,
+        "lap2": 210000,
+        "shoot2": 272000,
+        "finish": 386000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 8,
+      "id": 110,
+      "totalTime": 386000
+    },
+    {
+      "eventId": 14,
+      "competitorId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 105000,
+        "shoot1": 159000,
+        "lap2": 275000,
+        "shoot2": 304000,
+        "finish": 397000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 111,
+      "totalTime": 397000
+    },
+    {
+      "eventId": 15,
+      "competitorId": 1,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 63000,
+        "shoot1": 80000,
+        "lap2": 159000,
+        "shoot2": 204000,
+        "finish": 275000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 112,
+      "totalTime": 275000
+    },
+    {
+      "eventId": 15,
+      "competitorId": 3,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 76000,
+        "shoot1": 98000,
+        "lap2": 185000,
+        "shoot2": 217000,
+        "finish": 295000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 113,
+      "totalTime": 295000
+    },
+    {
+      "eventId": 15,
+      "competitorId": 16,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 71000,
+        "shoot1": 120000,
+        "lap2": 198000,
+        "shoot2": 227000,
+        "finish": 305000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 4,
+      "id": 114,
+      "totalTime": 305000
+    },
+    {
+      "eventId": 15,
+      "competitorId": 2,
+      "opponentId": 16,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 76000,
+        "shoot1": 101000,
+        "lap2": 177000,
+        "shoot2": 211000,
+        "finish": 286000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 115,
+      "totalTime": 286000
+    },
+    {
+      "eventId": 15,
+      "competitorId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 94000,
+        "lap2": 175000,
+        "shoot2": 225000,
+        "finish": 305000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 116,
+      "totalTime": 305000
+    },
+    {
+      "eventId": 15,
+      "competitorId": 27,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 70000,
+        "shoot1": 114000,
+        "lap2": 195000,
+        "shoot2": 222000,
+        "finish": 306000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 117,
+      "totalTime": 306000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 2,
+      "opponentId": 23,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 76000,
+        "shoot1": 93000,
+        "lap2": 179000,
+        "shoot2": 201000,
+        "finish": 274000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 121,
+      "totalTime": 274000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 23,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 67000,
+        "shoot1": 90000,
+        "lap2": 161000,
+        "shoot2": 218000,
+        "finish": 299000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 122,
+      "totalTime": 299000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 73000,
+        "shoot1": 106000,
+        "lap2": 198000,
+        "shoot2": 218000,
+        "finish": 303000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 123,
+      "totalTime": 303000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 69000,
+        "shoot1": 82000,
+        "lap2": 160000,
+        "shoot2": 194000,
+        "finish": 278000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 124,
+      "totalTime": 278000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 3,
+      "opponentId": 27,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 79000,
+        "shoot1": 97000,
+        "lap2": 181000,
+        "shoot2": 220000,
+        "finish": 316000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 125,
+      "totalTime": 316000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 27,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 93000,
+        "shoot1": 115000,
+        "lap2": 201000,
+        "shoot2": 249000,
+        "finish": 324000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 126,
+      "totalTime": 324000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 10,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 97000,
+        "shoot1": 120000,
+        "lap2": 210000,
+        "shoot2": 255000,
+        "finish": 391000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 127,
+      "totalTime": 391000
+    },
+    {
+      "eventId": 17,
+      "competitorId": 6,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 66000,
+        "shoot1": 85000,
+        "lap2": 162000,
+        "shoot2": 190000,
+        "finish": 263000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 128,
+      "totalTime": 263000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 23,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 70000,
+        "shoot1": 104000,
+        "lap2": 182000,
+        "shoot2": 221000,
+        "finish": 298000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 4,
+      "id": 129,
+      "totalTime": 298000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 2,
+      "opponentId": 23,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 74000,
+        "shoot1": 90000,
+        "lap2": 173000,
+        "shoot2": 202000,
+        "finish": 276000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 130,
+      "totalTime": 276000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 3,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 76000,
+        "shoot1": 92000,
+        "lap2": 182000,
+        "shoot2": 210000,
+        "finish": 294000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 131,
+      "totalTime": 294000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 1,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 64000,
+        "shoot1": 86000,
+        "lap2": 168000,
+        "shoot2": 188000,
+        "finish": 262000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 132,
+      "totalTime": 262000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 17,
+      "opponentId": 27,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 68000,
+        "shoot1": 101000,
+        "lap2": 176000,
+        "shoot2": 219000,
+        "finish": 296000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 133,
+      "totalTime": 296000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 27,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 82000,
+        "shoot1": 105000,
+        "lap2": 187000,
+        "shoot2": 243000,
+        "finish": 335000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 4,
+      "id": 134,
+      "totalTime": 335000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 70000,
+        "shoot1": 93000,
+        "lap2": 171000,
+        "shoot2": 197000,
+        "finish": 270000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 135,
+      "totalTime": 270000
+    },
+    {
+      "eventId": 18,
+      "competitorId": 30,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 80000,
+        "shoot1": 121000,
+        "lap2": 207000,
+        "shoot2": 277000,
+        "finish": 359000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 7,
+      "id": 136,
+      "totalTime": 359000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 8,
+      "opponentId": 26,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 75000,
+        "shoot1": 111000,
+        "lap2": 218000,
+        "shoot2": 233000,
+        "finish": 332000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 137,
+      "totalTime": 332000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 26,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 87000,
+        "shoot1": 146000,
+        "lap2": 247000,
+        "shoot2": 294000,
+        "finish": 405000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 6,
+      "id": 138,
+      "totalTime": 405000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 29,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 64000,
+        "shoot1": 135000,
+        "lap2": 223000,
+        "shoot2": 277000,
+        "finish": 377000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 7,
+      "id": 139,
+      "totalTime": 377000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 1,
+      "opponentId": 29,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 65000,
+        "shoot1": 88000,
+        "lap2": 168000,
+        "shoot2": 190000,
+        "finish": 269000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 140,
+      "totalTime": 269000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 2,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 81000,
+        "shoot1": 112000,
+        "lap2": 196000,
+        "shoot2": 232000,
+        "finish": 306000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 141,
+      "totalTime": 306000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 10,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 90000,
+        "shoot1": 115000,
+        "lap2": 213000,
+        "shoot2": 236000,
+        "finish": 332000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 142,
+      "totalTime": 332000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 17,
+      "opponentId": 28,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 69000,
+        "shoot1": 86000,
+        "lap2": 160000,
+        "shoot2": 200000,
+        "finish": 270000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 143,
+      "totalTime": 270000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 28,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 61000,
+        "shoot1": 135000,
+        "lap2": 207000,
+        "shoot2": 245000,
+        "finish": 325000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 7,
+      "id": 144,
+      "totalTime": 325000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 3,
+      "opponentId": 19,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 89000,
+        "shoot1": 121000,
+        "lap2": 215000,
+        "shoot2": 250000,
+        "finish": 348000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 145,
+      "totalTime": 348000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 19,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 81000,
+        "shoot1": 105000,
+        "lap2": 205000,
+        "shoot2": 250000,
+        "finish": 363000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 146,
+      "totalTime": 363000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 5,
+      "opponentId": 16,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 80000,
+        "shoot1": 100000,
+        "lap2": 196000,
+        "shoot2": 224000,
+        "finish": 311000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 147,
+      "totalTime": 311000
+    },
+    {
+      "eventId": 19,
+      "competitorId": 16,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 74000,
+        "shoot1": 144000,
+        "lap2": 225000,
+        "shoot2": 280000,
+        "finish": 364000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 7,
+      "id": 148,
+      "totalTime": 364000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 1,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 72000,
+        "shoot1": 90000,
+        "lap2": 168000,
+        "shoot2": 210000,
+        "finish": 285000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 149,
+      "totalTime": 285000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 2,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 95000,
+        "lap2": 179000,
+        "shoot2": 206000,
+        "finish": 283000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 150,
+      "totalTime": 283000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 30,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 78000,
+        "shoot1": 150000,
+        "lap2": 237000,
+        "shoot2": 300000,
+        "finish": 387000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 10,
+      "id": 151,
+      "totalTime": 387000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 3,
+      "opponentId": 30,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 86000,
+        "shoot1": 117000,
+        "lap2": 213000,
+        "shoot2": 230000,
+        "finish": 322000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 152,
+      "totalTime": 322000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 26,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 90000,
+        "shoot1": 120000,
+        "lap2": 229000,
+        "shoot2": 269000,
+        "finish": 415000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 153,
+      "totalTime": 415000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 8,
+      "opponentId": 26,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 94000,
+        "shoot1": 135000,
+        "lap2": 232000,
+        "shoot2": 257000,
+        "finish": 358000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 7,
+      "id": 154,
+      "totalTime": 358000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 16,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 75000,
+        "shoot1": 140000,
+        "lap2": 218000,
+        "shoot2": 280000,
+        "finish": 367000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 9,
+      "id": 155,
+      "totalTime": 367000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 17,
+      "opponentId": 16,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 120000,
+        "shoot1": 160000,
+        "lap2": 253000,
+        "shoot2": 307000,
+        "finish": 460000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 156,
+      "totalTime": 460000
+    },
+    {
+      "eventId": 20,
+      "competitorId": 27,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 77000,
+        "shoot1": 150000,
+        "lap2": 168000,
+        "shoot2": 295000,
+        "finish": 388000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 10,
+      "id": 157,
+      "totalTime": 388000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 25,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 95000,
+        "shoot1": 173000,
+        "lap2": 267000,
+        "shoot2": 345000,
+        "finish": 436000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 8,
+      "id": 158,
+      "totalTime": 436000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 17,
+      "opponentId": 25,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 112000,
+        "shoot1": 163000,
+        "lap2": 240000,
+        "shoot2": 275000,
+        "finish": 367000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 6,
+      "id": 159,
+      "totalTime": 367000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 1,
+      "opponentId": 4,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 62000,
+        "shoot1": 77000,
+        "lap2": 155000,
+        "shoot2": 170000,
+        "finish": 252000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 160,
+      "totalTime": 252000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 4,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 112000,
+        "shoot1": 166000,
+        "lap2": 238000,
+        "shoot2": 268000,
+        "finish": 345000
+      },
+      "shooting1": {
+        "errors": 5
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 6,
+      "id": 161,
+      "totalTime": 345000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 26,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 89000,
+        "shoot1": 110000,
+        "lap2": 210000,
+        "shoot2": 271000,
+        "finish": 405000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 4,
+      "id": 162,
+      "totalTime": 405000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 10,
+      "opponentId": 26,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 89000,
+        "shoot1": 133000,
+        "lap2": 236000,
+        "shoot2": 285000,
+        "finish": 364000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 6,
+      "id": 163,
+      "totalTime": 364000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 8,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 94000,
+        "shoot1": 145000,
+        "lap2": 249000,
+        "shoot2": 275000,
+        "finish": 364000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 5,
+      "id": 164,
+      "totalTime": 364000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 2,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 71000,
+        "shoot1": 99000,
+        "lap2": 180000,
+        "shoot2": 208000,
+        "finish": 290000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 165,
+      "totalTime": 290000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 31,
+      "opponentId": 32,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 96000,
+        "shoot1": 174000,
+        "lap2": 268000,
+        "shoot2": 345000,
+        "finish": 446000
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 8,
+      "id": 166,
+      "totalTime": 446000
+    },
+    {
+      "eventId": 21,
+      "competitorId": 32,
+      "opponentId": 31,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 74000,
+        "shoot1": 133000,
+        "lap2": 210000,
+        "shoot2": 267000,
+        "finish": 341000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 167,
+      "totalTime": 341000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 2,
+      "opponentId": 17,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 73000,
+        "shoot1": 87000,
+        "lap2": 170000,
+        "shoot2": 203000,
+        "finish": 277000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 168,
+      "totalTime": 277000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 17,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 73000,
+        "shoot1": 95000,
+        "lap2": 170000,
+        "shoot2": 209000,
+        "finish": 283000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 4,
+      "id": 169,
+      "totalTime": 283000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 3,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 72000,
+        "shoot1": 87000,
+        "lap2": 174000,
+        "shoot2": 197000,
+        "finish": 282000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 170,
+      "totalTime": 282000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 1,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 61000,
+        "shoot1": 76000,
+        "lap2": 156000,
+        "shoot2": 191000,
+        "finish": 270000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 3,
+      "id": 171,
+      "totalTime": 270000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 6,
+      "opponentId": 8,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 70000,
+        "shoot1": 102000,
+        "lap2": 185000,
+        "shoot2": 220000,
+        "finish": 302000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 4,
+      "id": 172,
+      "totalTime": 302000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 8,
+      "opponentId": 6,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 99000,
+        "shoot1": 143000,
+        "lap2": 247000,
+        "shoot2": 304000,
+        "finish": 411000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 5
+      },
+      "penaltyCount": 7,
+      "id": 173,
+      "totalTime": 411000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 23,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 66000,
+        "shoot1": 87000,
+        "lap2": 161000,
+        "shoot2": 190000,
+        "finish": 260000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 3,
+      "id": 174,
+      "totalTime": 260000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 5,
+      "opponentId": 23,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 70000,
+        "shoot1": 94000,
+        "lap2": 176000,
+        "shoot2": 198000,
+        "finish": 275000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 175,
+      "totalTime": 275000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 7,
+      "opponentId": 16,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 100000,
+        "shoot1": 157000,
+        "lap2": 277000,
+        "shoot2": 313000,
+        "finish": 429000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 4,
+      "id": 176,
+      "totalTime": 429000
+    },
+    {
+      "eventId": 22,
+      "competitorId": 16,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 73000,
+        "shoot1": 142000,
+        "lap2": 204000,
+        "shoot2": 241000,
+        "finish": 318000
+      },
+      "shooting1": {
+        "errors": 3
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 4,
+      "id": 177,
+      "totalTime": 318000
+    },
+    {
+      "eventId": 29,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765443217701,
+        "lap1": 73000,
+        "shoot1": 87000,
+        "lap2": 166000,
+        "shoot2": 181000,
+        "finish": 257000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 200,
+      "totalTime": 257000
+    },
+    {
+      "eventId": 29,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765443217701,
+        "lap1": 84000,
+        "shoot1": 105000,
+        "lap2": 187000,
+        "shoot2": 203000,
+        "finish": 282000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 201,
+      "totalTime": 282000
+    },
+    {
+      "eventId": 39,
+      "competitorId": 3,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765487408509,
+        "lap1": 1765487478666,
+        "shoot1": 1765487509710,
+        "lap2": 1765487584937,
+        "shoot2": 1765487606911,
+        "finish": 1765487682657
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 241,
+      "totalTime": 274148
+    },
+    {
+      "eventId": 39,
+      "competitorId": 5,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765487408509,
+        "lap1": 1765487481941,
+        "shoot1": 1765487504483,
+        "lap2": 1765487585689,
+        "shoot2": 1765487609758,
+        "finish": 1765487687243
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 242,
+      "totalTime": 278734
+    },
+    {
+      "eventId": 39,
+      "competitorId": 10,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765487854345,
+        "lap1": 1765487935850,
+        "shoot1": 1765487970411,
+        "lap2": 1765488064284,
+        "shoot2": 1765488096836,
+        "finish": 1765488180962
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 4,
+      "id": 243,
+      "totalTime": 326617
+    },
+    {
+      "eventId": 39,
+      "competitorId": 7,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765487854345,
+        "lap1": 1765487959734,
+        "shoot1": 1765487990472,
+        "lap2": 1765488108455,
+        "shoot2": 1765488150816,
+        "finish": 1765488271529
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 3
+      },
+      "penaltyCount": 4,
+      "id": 244,
+      "totalTime": 417184
+    },
+    {
+      "eventId": 39,
+      "competitorId": 1,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765488363342,
+        "lap1": 1765488430281,
+        "shoot1": 1765488443549,
+        "lap2": 1765488527552,
+        "shoot2": 1765488554389,
+        "finish": 1765488624449
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 245,
+      "totalTime": 261107
+    },
+    {
+      "eventId": 39,
+      "competitorId": 2,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765488363342,
+        "lap1": 1765488435775,
+        "shoot1": 1765488459944,
+        "lap2": 1765488534525,
+        "shoot2": 1765488552500,
+        "finish": 1765488622450
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 246,
+      "totalTime": 259108
+    },
+    {
+      "eventId": 40,
+      "competitorId": 1,
+      "opponentId": 7,
+      "mode": "sprint",
+      "splits": {},
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 249
+    },
+    {
+      "eventId": 40,
+      "competitorId": 7,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765722799433,
+        "lap1": 1765722906867,
+        "shoot1": 1765722953286,
+        "lap2": 1765723071206,
+        "shoot2": 1765723103055,
+        "finish": 1765723227100
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 3,
+      "id": 250,
+      "totalTime": 427667
+    },
+    {
+      "eventId": 40,
+      "competitorId": 5,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765721282488,
+        "lap1": 1765721354785,
+        "shoot1": 1765721378672,
+        "lap2": 1765721465604,
+        "shoot2": 1765721489799,
+        "finish": 1765721569957
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 253,
+      "totalTime": 287469
+    },
+    {
+      "eventId": 40,
+      "competitorId": 10,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765721282488,
+        "lap1": 1765721357952,
+        "shoot1": 1765721379488,
+        "lap2": 1765721466377,
+        "shoot2": 1765721491360,
+        "finish": 1765721577815
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 254,
+      "totalTime": 295327
+    },
+    {
+      "eventId": 40,
+      "competitorId": 2,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765721766424,
+        "lap1": 1765721838614,
+        "shoot1": 1765721859016,
+        "lap2": 1765721937497,
+        "shoot2": 1765721985097,
+        "finish": 1765722072043
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 5,
+      "id": 255,
+      "totalTime": 305619
+    },
+    {
+      "eventId": 40,
+      "competitorId": 3,
+      "opponentId": 2,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765721766424,
+        "lap1": 1765721837379,
+        "shoot1": 1765721857674,
+        "lap2": 1765721938881,
+        "shoot2": 1765721953185,
+        "finish": 1765722030899
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 256,
+      "totalTime": 264475
+    },
+    {
+      "eventId": 40,
+      "competitorId": 8,
+      "mode": "sprint",
+      "splits": {
+        "start": 1765722213691,
+        "lap1": 1765722303764,
+        "shoot1": 1765722322478,
+        "lap2": 1765722415745,
+        "shoot2": 1765722447235,
+        "finish": 1765722533672
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 257,
+      "totalTime": 319981
+    },
+    {
+      "eventId": 42,
+      "competitorId": 3,
+      "opponentId": 9,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 121210,
+        "shoot1": 146000,
+        "lap2": 210000,
+        "shoot2": 258000,
+        "finish": 452000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 2,
+      "id": 260,
+      "totalTime": 452000
+    },
+    {
+      "eventId": 42,
+      "competitorId": 9,
+      "opponentId": 3,
+      "mode": "sprint",
+      "splits": {},
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 261
+    },
+    {
+      "eventId": 42,
+      "competitorId": 1,
+      "opponentId": 10,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 109000,
+        "shoot1": 151000,
+        "lap2": 268000,
+        "shoot2": 312000,
+        "finish": 425000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 262,
+      "totalTime": 425000
+    },
+    {
+      "eventId": 42,
+      "competitorId": 10,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 146000,
+        "shoot1": 183000,
+        "lap2": 340000,
+        "shoot2": 192000,
+        "finish": 491000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 2,
+      "id": 263,
+      "totalTime": 491000
+    },
+    {
+      "eventId": 42,
+      "competitorId": 2,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 111550,
+        "shoot1": 156000,
+        "lap2": 265870,
+        "shoot2": 307000,
+        "finish": 407400
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 264,
+      "totalTime": 407400
+    },
+    {
+      "eventId": 43,
+      "competitorId": 1,
+      "mode": "pursuit",
+      "splits": {
+        "start": 1766918936572,
+        "lap1": 1766919050042,
+        "shoot1": 1766919118364,
+        "lap2": 1766919292091,
+        "shoot2": 1766919331720,
+        "finish": 1766919426550
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 5,
+      "id": 265,
+      "totalTime": 489978
+    },
+    {
+      "eventId": 43,
+      "competitorId": 2,
+      "mode": "pursuit",
+      "splits": {
+        "start": 1766918936580,
+        "lap1": 1766919051322,
+        "shoot1": 1766919117490,
+        "lap2": 1766919292863,
+        "shoot2": 1766919326539,
+        "finish": 1766919421779
+      },
+      "shooting1": {
+        "errors": 4
+      },
+      "shooting2": {
+        "errors": 2
+      },
+      "penaltyCount": 6,
+      "id": 266,
+      "totalTime": 485199
+    },
+    {
+      "eventId": 43,
+      "competitorId": 3,
+      "mode": "pursuit",
+      "splits": {
+        "start": 1766918936587,
+        "lap1": 1766919058030,
+        "shoot1": 1766919097055,
+        "lap2": 1766919291114,
+        "shoot2": 1766919311746,
+        "finish": 1766919416704
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 1,
+      "id": 267,
+      "totalTime": 480117
+    },
+    {
+      "eventId": 48,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 117000,
+        "shoot1": 145000,
+        "lap2": 270000,
+        "shoot2": 300000,
+        "finish": 419000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 0
+      },
+      "penaltyCount": 0,
+      "id": 288,
+      "totalTime": 419000
+    },
+    {
+      "eventId": 48,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 111000,
+        "shoot1": 160000,
+        "lap2": 280000,
+        "shoot2": 310000,
+        "finish": 414000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 289,
+      "totalTime": 414000
+    },
+    {
+      "eventId": 49,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 101000,
+        "shoot1": 156000,
+        "lap2": 266000,
+        "shoot2": 368000,
+        "finish": 468000
+      },
+      "shooting1": {
+        "errors": 2
+      },
+      "shooting2": {
+        "errors": 4
+      },
+      "penaltyCount": 6,
+      "id": 290,
+      "totalTime": 468000
+    },
+    {
+      "eventId": 49,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 111000,
+        "shoot1": 139000,
+        "lap2": 259000,
+        "shoot2": 299000,
+        "finish": 415000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 291,
+      "totalTime": 415000
+    },
+    {
+      "eventId": 50,
+      "competitorId": 1,
+      "opponentId": 5,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 107000,
+        "shoot1": 138000,
+        "lap2": 258000,
+        "shoot2": 305000,
+        "finish": 411000
+      },
+      "shooting1": {
+        "errors": 0
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 1,
+      "id": 292,
+      "totalTime": 411000
+    },
+    {
+      "eventId": 50,
+      "competitorId": 5,
+      "opponentId": 1,
+      "mode": "sprint",
+      "splits": {
+        "lap1": 115000,
+        "shoot1": 158000,
+        "lap2": 286000,
+        "shoot2": 329000,
+        "finish": 454000
+      },
+      "shooting1": {
+        "errors": 1
+      },
+      "shooting2": {
+        "errors": 1
+      },
+      "penaltyCount": 2,
+      "id": 293,
+      "totalTime": 454000
+    }
+  ]
+}

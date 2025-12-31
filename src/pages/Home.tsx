@@ -21,7 +21,7 @@ export const Home = () => {
         <div className="space-y-8">
             <div>
                 <h1 className="text-4xl font-bold mb-2">Tableau de Bord</h1>
-                <p className="text-slate-400">Bienvenue dans votre gestionnaire de biathlon</p>
+                <p className="text-slate-400">Bienvenue sur votre portail de statistiques Biathlon</p>
             </div>
 
             {/* Quick Stats */}
@@ -219,8 +219,8 @@ export const Home = () => {
             </div>
 
             {/* Quick Action */}
-            <div>
-                <h2 className="text-2xl font-bold mb-6">Gestion</h2>
+            <div className="mb-8">
+                <h2 className="text-2xl font-bold mb-6">Informations</h2>
                 <div
                     onClick={() => navigate('/competitors')}
                     className="glass-panel p-6 rounded-2xl cursor-pointer hover:bg-white/10 transition-all hover:scale-[1.02] group"
@@ -230,8 +230,8 @@ export const Home = () => {
                             <Users className="w-6 h-6" />
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold">Gérer les Concurrents</h3>
-                            <p className="text-slate-400 text-sm">Ajouter ou modifier des athlètes</p>
+                            <h3 className="text-lg font-semibold">Les Concurrents</h3>
+                            <p className="text-slate-400 text-sm">Voir tous les athlètes</p>
                         </div>
                     </div>
                 </div>

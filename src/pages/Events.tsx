@@ -1,6 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { Plus, Calendar, Trophy, ChevronRight } from 'lucide-react';
+import { Calendar, Trophy, ChevronRight } from 'lucide-react';
 import { db } from '../db/db';
 
 import { useLocation } from '../context/LocationContext';
@@ -18,17 +18,9 @@ export const Events = () => {
                         Événements
                     </h1>
                     <p className="text-slate-400 mt-1">
-                        Gérez vos compétitions et duels
+                        Consultez les résultats des compétitions
                     </p>
                 </div>
-
-                <Link
-                    to="/events/new"
-                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-medium shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
-                >
-                    <Plus className="w-5 h-5" />
-                    Nouvel Événement
-                </Link>
             </div>
 
             <div className="grid gap-4">

@@ -10,19 +10,14 @@ import { SprintEvents } from './pages/SprintEvents';
 import { PursuitEvents } from './pages/PursuitEvents';
 import { RelayEvents } from './pages/RelayEvents';
 import { IndividualEvents } from './pages/IndividualEvents';
-import { EventCreate } from './pages/EventCreate';
 import { EventDashboard } from './pages/EventDashboard';
-import { Race } from './pages/Race';
-import { PursuitRace } from './pages/PursuitRace';
-import { RelayRace } from './pages/RelayRace';
-import { ManualRaceEntry } from './pages/ManualRaceEntry';
 import { Stats } from './pages/Stats';
 import { GeneralStats } from './pages/GeneralStats';
 import { SprintStats } from './pages/SprintStats';
 import { PursuitStats } from './pages/PursuitStats';
 import { RelayStats } from './pages/RelayStats';
 import { IndividualStats } from './pages/IndividualStats';
-import { Settings } from './pages/Settings';
+
 
 import { LocationProvider } from './context/LocationContext';
 import { SelectLocation } from './pages/SelectLocation';
@@ -56,19 +51,13 @@ function App() {
             <Route path="events/pursuit" element={<PursuitEvents />} />
             <Route path="events/relay" element={<RelayEvents />} />
             <Route path="events/individual" element={<IndividualEvents />} />
-            <Route path="events/new/:type" element={<EventCreate />} />
             <Route path="events/:id" element={<EventDashboard />} />
-            <Route path="race/:id" element={<Race />} />
-            <Route path="race-mass/:id" element={<PursuitRace />} />
-            <Route path="race-relay/:id" element={<RelayRace />} />
-            <Route path="race/manual/:id" element={<ManualRaceEntry />} />
             <Route path="stats" element={<Stats />} />
             <Route path="stats/general" element={<GeneralStats />} />
             <Route path="stats/sprint" element={<SprintStats />} />
             <Route path="stats/pursuit" element={<PursuitStats />} />
             <Route path="stats/relay" element={<RelayStats />} />
             <Route path="stats/individual" element={<IndividualStats />} />
-            <Route path="settings" element={<Settings />} />
           </Route>
         </Routes>
       </LocationProvider>

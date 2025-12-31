@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, type RaceMode } from '../db/db';
-import { Calendar, Trophy, Plus, ArrowRight } from 'lucide-react';
+import { Calendar, Trophy, ArrowRight } from 'lucide-react';
 
 interface EventsByTypeProps {
     type: RaceMode;
@@ -27,26 +27,13 @@ export const EventsByType = ({ type, title, description }: EventsByTypeProps) =>
                     <h1 className="text-4xl font-bold">{title}</h1>
                     <p className="text-slate-400 mt-2">{description}</p>
                 </div>
-                <button
-                    onClick={() => navigate(`/events/new/${type}`)}
-                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
-                >
-                    <Plus className="w-5 h-5" />
-                    Nouvel Événement
-                </button>
             </div>
 
             {events.length === 0 ? (
                 <div className="glass-panel p-12 rounded-2xl text-center">
                     <Trophy className="w-16 h-16 mx-auto text-slate-600 mb-4" />
                     <h3 className="text-xl font-semibold text-slate-400 mb-2">Aucun événement {title.toLowerCase()}</h3>
-                    <p className="text-slate-500 mb-6">Créez votre premier événement pour commencer</p>
-                    <button
-                        onClick={() => navigate(`/events/new/${type}`)}
-                        className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all"
-                    >
-                        Créer un événement
-                    </button>
+                    <p className="text-slate-500 mb-6">Les résultats apparaîtront ici.</p>
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

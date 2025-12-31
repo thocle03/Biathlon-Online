@@ -1,16 +1,13 @@
 import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
-import { Plus, Search, Trophy, Medal, Timer } from 'lucide-react';
+import { Search, Trophy, Medal, Timer } from 'lucide-react';
 import { db } from '../db/db';
-import { Modal } from '../components/ui/Modal';
-import { CompetitorForm } from '../components/competitors/CompetitorForm';
 
 import { useLocation } from '../context/LocationContext';
 
 export const Competitors = () => {
     const navigate = useNavigate();
-    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const { location } = useLocation();
 
@@ -69,17 +66,9 @@ export const Competitors = () => {
                         Concurrents
                     </h1>
                     <p className="text-slate-400 mt-1">
-                        Gérez la liste de vos athlètes
+                        Liste des athlètes
                     </p>
                 </div>
-
-                <button
-                    onClick={() => setIsAddModalOpen(true)}
-                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-medium shadow-lg shadow-blue-900/20 transition-all hover:scale-105"
-                >
-                    <Plus className="w-5 h-5" />
-                    Ajouter un concurrent
-                </button>
             </div>
 
             {/* Search Bar */}
@@ -147,17 +136,6 @@ export const Competitors = () => {
                     </div>
                 )}
             </div>
-
-            <Modal
-                isOpen={isAddModalOpen}
-                onClose={() => setIsAddModalOpen(false)}
-                title="Ajouter un concurrent"
-            >
-                <CompetitorForm
-                    onSuccess={() => setIsAddModalOpen(false)}
-                    onCancel={() => setIsAddModalOpen(false)}
-                />
-            </Modal>
         </div>
     );
 };

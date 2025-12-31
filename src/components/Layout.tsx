@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
-import { LayoutDashboard, Users, Timer, Trophy, Settings, MapPin } from 'lucide-react';
+import { LayoutDashboard, Users, Timer, Trophy, MapPin } from 'lucide-react';
 import clsx from 'clsx';
 import { useLocation } from '../context/LocationContext';
 
@@ -80,9 +80,7 @@ export const Layout = () => {
                     </div>
                 </nav>
 
-                <div className="pt-6 border-t border-white/10">
-                    <NavItem to="/settings" icon={Settings} label="Paramètres" />
-                </div>
+
             </aside>
 
             {/* Main Content */}
