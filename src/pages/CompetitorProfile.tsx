@@ -101,7 +101,7 @@ export const CompetitorProfile = () => {
                 </div>
 
                 {/* Tabs & Year Selector */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                     <div className="flex bg-slate-800 p-1 rounded-lg">
                         <button
                             onClick={() => setActiveTab('profile')}
@@ -240,42 +240,43 @@ export const CompetitorProfile = () => {
 
                     {/* History */}
                     <div className="glass-panel rounded-2xl overflow-hidden">
-                        <h2 className="text-xl font-semibold p-6 border-b border-white/10">Historique des courses</h2>
-                        <table className="w-full text-left">
-                            <thead className="bg-white/5 text-slate-400 font-medium">
-                                <tr>
-                                    <th className="p-4">Date</th>
-                                    <th className="p-4">Événement</th>
-                                    <th className="p-4 text-center">Tirs</th>
-                                    <th className="p-4 text-right">Temps</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-white/5">
-                                {filteredRaces?.slice().reverse().map(race => {
-                                    const event = allEvents?.find(e => e.id === race.eventId);
-                                    const errors = (race.shooting1?.errors || 0) + (race.shooting2?.errors || 0);
-                                    return (
-                                        <tr key={race.id} className="hover:bg-white/5 transition-colors">
-                                            <td className="p-4 text-slate-400">{event ? new Date(event.date).toLocaleDateString() : '-'}</td>
-                                            <td className="p-4 font-medium text-white">{event?.name || 'Inconnu'}</td>
-                                            <td className="p-4 text-center">
-                                                <div className="flex flex-col items-center text-xs">
-                                                    <span className={errors === 0 ? "text-emerald-400 font-bold" : "text-slate-300"}>
-                                                        {10 - errors}/10
-                                                    </span>
-                                                    <span className="text-slate-600 scale-75">
-                                                        C: {5 - (race.shooting1?.errors || 0)} | D: {5 - (race.shooting2?.errors || 0)}
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td className="p-4 text-right font-mono">
-                                                {race.totalTime ? new Date(race.totalTime).toISOString().slice(14, 21) : '-'}
-                                            </td>
-                                        </tr>
-                                    );
-                                })}
-                            </tbody>
-                        </table>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left min-w-[500px]">
+                                <thead className="bg-white/5 text-slate-400 font-medium">
+                                    <tr>
+                                        <th className="p-4">Date</th>
+                                        <th className="p-4">Événement</th>
+                                        <th className="p-4 text-center">Tirs</th>
+                                        <th className="p-4 text-right">Temps</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5">
+                                    {filteredRaces?.slice().reverse().map(race => {
+                                        const event = allEvents?.find(e => e.id === race.eventId);
+                                        const errors = (race.shooting1?.errors || 0) + (race.shooting2?.errors || 0);
+                                        return (
+                                            <tr key={race.id} className="hover:bg-white/5 transition-colors">
+                                                <td className="p-4 text-slate-400">{event ? new Date(event.date).toLocaleDateString() : '-'}</td>
+                                                <td className="p-4 font-medium text-white">{event?.name || 'Inconnu'}</td>
+                                                <td className="p-4 text-center">
+                                                    <div className="flex flex-col items-center text-xs">
+                                                        <span className={errors === 0 ? "text-emerald-400 font-bold" : "text-slate-300"}>
+                                                            {10 - errors}/10
+                                                        </span>
+                                                        <span className="text-slate-600 scale-75">
+                                                            C: {5 - (race.shooting1?.errors || 0)} | D: {5 - (race.shooting2?.errors || 0)}
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td className="p-4 text-right font-mono">
+                                                    {race.totalTime ? new Date(race.totalTime).toISOString().slice(14, 21) : '-'}
+                                                </td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </>
             ) : (

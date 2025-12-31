@@ -215,30 +215,32 @@ export const GlobalRankings = () => {
 
                         <div className="lg:col-span-2">
                             <div className="overflow-hidden rounded-xl border border-white/5 bg-slate-900/40">
-                                <table className="w-full">
-                                    <thead className="bg-white/5 border-b border-white/5">
-                                        <tr className="text-left text-slate-400 text-sm uppercase tracking-wider">
-                                            <th className="px-6 py-4 font-bold">Rang</th>
-                                            <th className="px-6 py-4 font-bold">Concurrent</th>
-                                            <th className="px-6 py-4 font-bold text-center">Victoires</th>
-                                            <th className="px-6 py-4 font-bold text-center">Podiums</th>
-                                            <th className="px-6 py-4 font-bold text-right">Points</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-white/5">
-                                        {stats.slice(3, 10).map((c: any, idx: number) => (
-                                            <tr key={c.id} className="hover:bg-white/5 transition-colors">
-                                                <td className="px-6 py-4 font-bold text-slate-500">#{idx + 4}</td>
-                                                <td className="px-6 py-4 font-semibold text-white">{c.name}</td>
-                                                <td className="px-6 py-4 text-center">
-                                                    {c.wins > 0 && <span className="px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold">{c.wins}</span>}
-                                                </td>
-                                                <td className="px-6 py-4 text-center text-slate-400">{c.podiums}</td>
-                                                <td className="px-6 py-4 text-right font-bold text-yellow-500 text-lg">{c.totalPoints}</td>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full min-w-[700px]">
+                                        <thead className="bg-white/5 border-b border-white/5">
+                                            <tr className="text-left text-slate-400 text-sm uppercase tracking-wider">
+                                                <th className="px-6 py-4 font-bold">Rang</th>
+                                                <th className="px-6 py-4 font-bold">Concurrent</th>
+                                                <th className="px-6 py-4 font-bold text-center">Victoires</th>
+                                                <th className="px-6 py-4 font-bold text-center">Podiums</th>
+                                                <th className="px-6 py-4 font-bold text-right">Points</th>
                                             </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody className="divide-y divide-white/5">
+                                            {stats.slice(3, 10).map((c: any, idx: number) => (
+                                                <tr key={c.id} className="hover:bg-white/5 transition-colors">
+                                                    <td className="px-6 py-4 font-bold text-slate-500">#{idx + 4}</td>
+                                                    <td className="px-6 py-4 font-semibold text-white">{c.name}</td>
+                                                    <td className="px-6 py-4 text-center">
+                                                        {c.wins > 0 && <span className="px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold">{c.wins}</span>}
+                                                    </td>
+                                                    <td className="px-6 py-4 text-center text-slate-400">{c.podiums}</td>
+                                                    <td className="px-6 py-4 text-right font-bold text-yellow-500 text-lg">{c.totalPoints}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                                 {stats.length > 10 && (
                                     <div className="px-6 py-4 text-center text-slate-500 italic border-t border-white/5 bg-white/5">
                                         ... et {stats.length - 10} autres concurrents

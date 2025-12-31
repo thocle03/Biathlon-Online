@@ -140,13 +140,13 @@ export const Home = () => {
                     className="glass-panel p-8 rounded-2xl cursor-pointer hover:bg-white/10 transition-all hover:scale-[1.02] group relative overflow-hidden border-t-4 border-t-yellow-500"
                 >
                     <div className="absolute top-0 right-0 w-40 h-40 bg-yellow-500/10 rounded-full -mr-20 -mt-20 group-hover:bg-yellow-500/20 transition-colors" />
-                    <div className="relative flex items-center gap-6">
-                        <div className="w-20 h-20 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-yellow-500 group-hover:bg-yellow-500 group-hover:text-white transition-all group-hover:scale-110">
+                    <div className="relative flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+                        <div className="w-20 h-20 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-yellow-500 group-hover:bg-yellow-500 group-hover:text-white transition-all group-hover:scale-110 shrink-0">
                             <Trophy className="w-10 h-10" />
                         </div>
                         <div className="flex-1">
-                            <h3 className="text-3xl font-bold mb-2 group-hover:text-yellow-400 transition-colors">Classement Général</h3>
-                            <p className="text-slate-400">Toutes spécialités confondues - Tous les points cumulés</p>
+                            <h3 className="text-2xl sm:text-3xl font-bold mb-2 group-hover:text-yellow-400 transition-colors">Classement Général</h3>
+                            <p className="text-slate-400 text-sm sm:text-base">Toutes spécialités confondues - Tous les points cumulés</p>
                         </div>
                     </div>
                 </div>

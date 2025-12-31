@@ -100,12 +100,12 @@ export const EventDashboard = () => {
                         <div className="grid gap-4">
                             {duels.map((duel, idx) => (
                                 <div key={idx} className="glass-panel p-6 rounded-2xl flex items-center justify-between group relative">
-                                    <div className="flex-1 flex items-center justify-between gap-8">
-                                        <div className="flex-1 text-right font-semibold text-lg">{duel.r1Name}</div>
+                                    <div className="flex-1 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8">
+                                        <div className="flex-1 text-center sm:text-right font-semibold text-lg">{duel.r1Name}</div>
                                         {!isMassStart && (
                                             <>
                                                 <div className="px-3 py-1 bg-white/5 rounded text-xs font-bold text-slate-500 uppercase">VS</div>
-                                                <div className="flex-1 text-left font-semibold text-lg text-slate-300">{duel.r2Name}</div>
+                                                <div className="flex-1 text-center sm:text-left font-semibold text-lg text-slate-300">{duel.r2Name}</div>
                                             </>
                                         )}
                                         {isMassStart && <div className="flex-1"></div>}
