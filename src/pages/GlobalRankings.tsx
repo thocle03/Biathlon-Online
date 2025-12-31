@@ -62,23 +62,53 @@ export const GlobalRankings = () => {
             eventRankings.set(event.id!, rankings);
         });
 
+        const getWinPriority = (level: number) => {
+            if (level === 5) return 6;
+            if (level === 4) return 5;
+            if (level === 3) return 4;
+            if (level === 2) return 3;
+            if (level === 1 || level === 10) return 2; // Level 1 & Relay 10
+            if (level === 0 || level === 11) return 1; // Level 0 & Relay 11
+            if (level === 12) return 0; // Relay 12
+            return -1;
+        };
+
+        const eventMap = new Map(filteredEvents.map(e => [e.id, e]));
+
         const stats = competitors.map(c => {
             let totalPoints = 0;
             let wins = 0;
             let podiums = 0;
+            const winsByPriority = [0, 0, 0, 0, 0, 0, 0]; // Index 0 to 6
 
-            eventRankings.forEach(rankings => {
+            eventRankings.forEach((rankings, eventId) => {
+                const event = eventMap.get(eventId);
+                if (!event) return;
+
                 const perf = rankings.find(r => r.competitorId === c.id);
                 if (perf) {
                     totalPoints += perf.points;
-                    if (perf.rank === 1) wins++;
+                    if (perf.rank === 1) {
+                        wins++;
+                        const level = event.level ?? 0;
+                        const p = getWinPriority(level);
+                        if (p >= 0 && p < 7) winsByPriority[p]++;
+                    }
                     if (perf.rank <= 3) podiums++;
                 }
             });
 
-            return { ...c, totalPoints, wins, podiums };
+            return { ...c, totalPoints, wins, podiums, winsByPriority };
         }).filter(c => c.totalPoints > 0).sort((a, b) => {
             if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
+
+            // Compare wins by priority (descending)
+            for (let i = 6; i >= 0; i--) {
+                if (b.winsByPriority[i] !== a.winsByPriority[i]) {
+                    return b.winsByPriority[i] - a.winsByPriority[i];
+                }
+            }
+
             if (b.wins !== a.wins) return b.wins - a.wins;
             if (b.podiums !== a.podiums) return b.podiums - a.podiums;
             return a.name.localeCompare(b.name);

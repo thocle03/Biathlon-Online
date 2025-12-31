@@ -77,28 +77,57 @@ export const StatsByType = ({ type, title }: StatsByTypeProps) => {
     });
 
     // Aggregate
+    const getWinPriority = (level: number) => {
+        if (level === 5) return 6;
+        if (level === 4) return 5;
+        if (level === 3) return 4;
+        if (level === 2) return 3;
+        if (level === 1 || level === 10) return 2;
+        if (level === 0 || level === 11) return 1;
+        if (level === 12) return 0;
+        return -1;
+    };
+
+    const eventMap = new Map(filteredEvents.map(e => [e.id, e]));
+
     const competitorStats = competitors.map(c => {
         let totalPoints = 0;
         let wins = 0;
         let podiums = 0;
         let racesCount = 0;
+        const winsByPriority = [0, 0, 0, 0, 0, 0, 0];
 
-        eventRankings.forEach(rankings => {
+        eventRankings.forEach((rankings, eventId) => {
+            const event = eventMap.get(eventId);
+            if (!event) return;
+
             const perf = rankings.find(r => r.competitorId === c.id);
             if (perf) {
                 totalPoints += perf.points;
                 racesCount++;
-                if (perf.rank === 1) wins++;
+                if (perf.rank === 1) {
+                    wins++;
+                    const level = event.level ?? 0;
+                    const p = getWinPriority(level);
+                    if (p >= 0 && p < 7) winsByPriority[p]++;
+                }
                 if (perf.rank <= 3) podiums++;
             }
         });
 
-        return { ...c, totalPoints, wins, podiums, racesCount };
+        return { ...c, totalPoints, wins, podiums, racesCount, winsByPriority };
     }).filter(c => c.totalPoints > 0 || c.racesCount > 0);
 
     // Sort by points
     competitorStats.sort((a, b) => {
         if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
+
+        for (let i = 6; i >= 0; i--) {
+            if (b.winsByPriority[i] !== a.winsByPriority[i]) {
+                return b.winsByPriority[i] - a.winsByPriority[i];
+            }
+        }
+
         if (b.wins !== a.wins) return b.wins - a.wins;
         if (b.podiums !== a.podiums) return b.podiums - a.podiums;
         return a.name.localeCompare(b.name);

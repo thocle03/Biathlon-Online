@@ -33,15 +33,15 @@ export const CompetitorRaceAnalysis = () => {
     // Safety check for splits
     const s = race.splits || {};
 
-    const lap1Time = (s.lap1 && s.start) ? s.lap1 - s.start : null;
-    const lap2Time = (s.lap2 && s.shoot1) ? s.lap2 - s.shoot1 : null;
-    const lap3Time = (s.finish && s.shoot2) ? s.finish - s.shoot2 : null;
+    const lap1Time = (s.lap1 !== undefined) ? s.lap1 : null;
+    const lap2Time = (s.lap2 !== undefined && s.shoot1 !== undefined) ? s.lap2 - s.shoot1 : null;
+    const lap3Time = (s.finish !== undefined && s.shoot2 !== undefined) ? s.finish - s.shoot2 : null;
 
     // Shooting Times (Range Time)
     // Shoot 1: lap1 -> shoot1
     // Shoot 2: lap2 -> shoot2
-    const shoot1Time = (s.shoot1 && s.lap1) ? s.shoot1 - s.lap1 : null;
-    const shoot2Time = (s.shoot2 && s.lap2) ? s.shoot2 - s.lap2 : null;
+    const shoot1Time = (s.shoot1 !== undefined && s.lap1 !== undefined) ? s.shoot1 - s.lap1 : null;
+    const shoot2Time = (s.shoot2 !== undefined && s.lap2 !== undefined) ? s.shoot2 - s.lap2 : null;
 
     const totalSkiTime = (lap1Time || 0) + (lap2Time || 0) + (lap3Time || 0);
 
