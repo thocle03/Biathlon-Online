@@ -32,27 +32,30 @@ export const CompetitorRaceAnalysis = () => {
 
     // Safety check for splits
     const s = race.splits || {};
-
     const isIndividual = race.mode === 'individual';
+    const startVal = s.start || 0;
 
     // Lap 1: start -> lap1
-    const lap1Time = (s.lap1 !== undefined && s.start !== undefined) ? s.lap1 - s.start : null;
+    const lap1Time = (s.lap1 !== undefined) ? s.lap1 - startVal : null;
     // Shoot 1: lap1 -> shoot1
     const shoot1Time = (s.shoot1 !== undefined && s.lap1 !== undefined) ? s.shoot1 - s.lap1 : null;
     // Lap 2: shoot1 -> lap2
     const lap2Time = (s.lap2 !== undefined && s.shoot1 !== undefined) ? s.lap2 - s.shoot1 : null;
     // Shoot 2: lap2 -> shoot2
     const shoot2Time = (s.shoot2 !== undefined && s.lap2 !== undefined) ? s.shoot2 - s.lap2 : null;
+
+    const finishVal = s.finish || race.totalTime || 0;
+
     // Lap 3: shoot2 -> lap3 (Individual) or shoot2 -> finish (Sprint)
     const lap3Time = isIndividual
         ? (s.lap3 !== undefined && s.shoot2 !== undefined ? s.lap3 - s.shoot2 : null)
-        : (s.finish !== undefined && s.shoot2 !== undefined ? s.finish - s.shoot2 : null);
+        : (finishVal && s.shoot2 !== undefined ? finishVal - s.shoot2 : null);
 
     // Individual specific
     const shoot3Time = isIndividual && s.shoot3 !== undefined && s.lap3 !== undefined ? s.shoot3 - s.lap3 : null;
     const lap4Time = isIndividual && s.lap4 !== undefined && s.shoot3 !== undefined ? s.lap4 - s.shoot3 : null;
     const shoot4Time = isIndividual && s.shoot4 !== undefined && s.lap4 !== undefined ? s.shoot4 - s.lap4 : null;
-    const lap5Time = isIndividual && s.finish !== undefined && s.shoot4 !== undefined ? s.finish - s.shoot4 : null;
+    const lap5Time = isIndividual && finishVal && s.shoot4 !== undefined ? finishVal - s.shoot4 : null;
 
     const totalSkiTime = (lap1Time || 0) + (lap2Time || 0) + (lap3Time || 0) + (lap4Time || 0) + (lap5Time || 0);
     const totalShootTime = (shoot1Time || 0) + (shoot2Time || 0) + (shoot3Time || 0) + (shoot4Time || 0);
@@ -81,7 +84,7 @@ export const CompetitorRaceAnalysis = () => {
                     <div className="text-3xl font-bold text-white font-mono">
                         {formatTime(totalSkiTime)}
                     </div>
-                    <div className="text-sm text-slate-400">Temps Total Ski</div>
+                    <div className="text-sm text-slate-400">Temps Total Course</div>
                 </div>
 
                 {/* Total Shooting Time */}

@@ -56,6 +56,9 @@ export const Competitors = () => {
             podiums,
             bestPosition: bestPosition === 999 ? undefined : bestPosition
         };
+    })?.sort((a, b) => {
+        if (b.totalRaces !== a.totalRaces) return b.totalRaces - a.totalRaces;
+        return a.name.localeCompare(b.name);
     });
 
     return (

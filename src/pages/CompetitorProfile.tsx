@@ -125,7 +125,7 @@ export const CompetitorProfile = () => {
                             onClick={() => setActiveTab('ski')}
                             className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === 'ski' ? 'bg-blue-600 text-white shadow' : 'text-slate-400 hover:text-white'}`}
                         >
-                            Temps de Ski
+                            Temps de Course
                         </button>
                     </div>
 
@@ -276,7 +276,7 @@ export const CompetitorProfile = () => {
                                         }
 
                                         return (
-                                            <tr key={race.id} className="hover:bg-white/5 transition-colors cursor-pointer" onClick={() => navigate(`/events/${event?.id}`)}>
+                                            <tr key={race.id} className="hover:bg-white/5 transition-colors cursor-pointer" onClick={() => navigate(`/competitors/${compId}/analysis/${race.id}`)}>
                                                 <td className="p-4 text-slate-400">
                                                     <div className="flex flex-col">
                                                         <span>{event ? new Date(event.date).toLocaleDateString() : '-'}</span>
@@ -318,12 +318,14 @@ const SkiAnalysisView = ({ races, allEvents, navigate }: { races: any[], allEven
         if (!race.totalTime) return null;
 
         let totalShootDuration = 0;
-        if (race.splits.shoot1 && race.splits.lap1) totalShootDuration += (race.splits.shoot1 - race.splits.lap1);
-        if (race.splits.shoot2 && race.splits.lap2) totalShootDuration += (race.splits.shoot2 - race.splits.lap2);
-        if (race.splits.shoot3 && race.splits.lap3) totalShootDuration += (race.splits.shoot3 - race.splits.lap3);
-        if (race.splits.shoot4 && race.splits.lap4) totalShootDuration += (race.splits.shoot4 - race.splits.lap4);
+        if (race.splits.shoot1 !== undefined && race.splits.lap1 !== undefined) totalShootDuration += (race.splits.shoot1 - race.splits.lap1);
+        if (race.splits.shoot2 !== undefined && race.splits.lap2 !== undefined) totalShootDuration += (race.splits.shoot2 - race.splits.lap2);
+        if (race.splits.shoot3 !== undefined && race.splits.lap3 !== undefined) totalShootDuration += (race.splits.shoot3 - race.splits.lap3);
+        if (race.splits.shoot4 !== undefined && race.splits.lap4 !== undefined) totalShootDuration += (race.splits.shoot4 - race.splits.lap4);
 
-        const skiTime = race.totalTime - totalShootDuration;
+        const startVal = race.splits.start || 0;
+        const totalDuration = (race.splits.finish || race.totalTime || 0) - startVal;
+        const skiTime = totalDuration - totalShootDuration;
         const event = allEvents.find(e => e.id === race.eventId);
         return { ...race, skiTime, eventName: event?.name, eventDate: event?.date };
     }).filter(d => d !== null).sort((a, b) => a!.skiTime - b!.skiTime);

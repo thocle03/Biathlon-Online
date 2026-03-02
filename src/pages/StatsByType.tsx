@@ -273,7 +273,7 @@ export const StatsByType = ({ type, title }: StatsByTypeProps) => {
                     <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-cyan-400 bg-cyan-400/5">
                         <div className="flex items-center gap-3 text-cyan-400 mb-2">
                             <Snowflake className="w-5 h-5" />
-                            <span className="text-sm font-bold uppercase tracking-wider">Meilleur Tour Ski</span>
+                            <span className="text-sm font-bold uppercase tracking-wider">Meilleur Tour Course</span>
                         </div>
                         <div className="text-3xl font-black font-mono text-white mb-1">
                             {formatTime(bestLapOverall?.time || 0)}
@@ -330,7 +330,7 @@ export const StatsByType = ({ type, title }: StatsByTypeProps) => {
                             <div className="glass-panel p-6 rounded-2xl border-t-4 border-t-cyan-400">
                                 <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
                                     <Snowflake className="w-5 h-5 text-cyan-400" />
-                                    Meilleurs Tours (Ski)
+                                    Meilleurs Tours (Course)
                                 </h2>
                                 <div className="space-y-3">
                                     {allLaps.slice(0, 5).map((lap, idx) => {
@@ -443,7 +443,7 @@ export const StatsByType = ({ type, title }: StatsByTypeProps) => {
                                 <div className="glass-panel p-6 rounded-2xl border-t-4 border-t-emerald-500">
                                     <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
                                         <Zap className="w-5 h-5 text-emerald-500" />
-                                        Meilleures Moyennes de Ski ({type === 'individual' ? 'Sur 5 tours' : 'Sur 3 tours'})
+                                        Meilleures Moyennes de Course ({type === 'individual' ? 'Sur 5 tours' : 'Sur 3 tours'})
                                     </h2>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {bestAvgs.map((avg, idx) => {

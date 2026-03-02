@@ -71,3 +71,10 @@ export default defineConfig([
   },
 ])
 ```
+commandes : 
+en local :
+npm run dev
+
+pour deployer
+npm run build
+npm run deploy
