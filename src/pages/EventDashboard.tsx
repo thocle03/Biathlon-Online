@@ -187,7 +187,7 @@ export const EventDashboard = () => {
                                                         {new Date(race.totalTime || 0).toISOString().slice(14, 21)}
                                                     </div>
                                                     <div className="text-xs text-slate-500 flex gap-1 justify-end">
-                                                        <span>{(race.shooting1?.errors || 0) + (race.shooting2?.errors || 0)} fautes</span>
+                                                        <span>{(race.shooting1?.errors || 0) + (race.shooting2?.errors || 0) + (race.shooting3?.errors || 0) + (race.shooting4?.errors || 0)} fautes</span>
                                                     </div>
                                                 </div>
                                             </div>

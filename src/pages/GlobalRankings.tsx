@@ -26,11 +26,11 @@ export const GlobalRankings = () => {
 
         const POINTS_SYSTEM = {
             0: [5, 3, 1],
-            1: [10, 6, 4, 2, 1],
-            2: [20, 12, 8, 4, 2],
-            3: [50, 30, 20, 10, 5],
-            4: [100, 60, 40, 20, 10, 8, 6, 4],
-            5: [200, 120, 80, 40, 20, 16, 12, 8, 6, 4]
+            1: [10, 7, 5, 3, 1],
+            2: [20, 14, 10, 6, 3],
+            3: [50, 35, 25, 15, 10],
+            4: [100, 80, 60, 40, 20, 16, 12, 8],
+            5: [200, 140, 100, 60, 40, 30, 20, 10, 5, 2]
         };
 
         const eventRankings = new Map<number, { competitorId: number; rank: number; points: number }[]>();
@@ -54,6 +54,11 @@ export const GlobalRankings = () => {
                 } else {
                     const scale = POINTS_SYSTEM[event.level as keyof typeof POINTS_SYSTEM] || [];
                     points = scale[rank - 1] || 0;
+
+                    // Individual Bonus: 1.5x (arrondi au supérieur)
+                    if (event.type === 'individual') {
+                        points = Math.ceil(points * 1.5);
+                    }
                 }
 
                 return { competitorId: race.competitorId, rank, points };
@@ -80,14 +85,18 @@ export const GlobalRankings = () => {
             let wins = 0;
             let podiums = 0;
             const winsByPriority = [0, 0, 0, 0, 0, 0, 0]; // Index 0 to 6
+            const pointsByYear = new Map<number, number[]>();
 
             eventRankings.forEach((rankings, eventId) => {
                 const event = eventMap.get(eventId);
                 if (!event) return;
+                const year = new Date(event.date).getFullYear();
 
                 const perf = rankings.find(r => r.competitorId === c.id);
                 if (perf) {
-                    totalPoints += perf.points;
+                    if (!pointsByYear.has(year)) pointsByYear.set(year, []);
+                    pointsByYear.get(year)?.push(perf.points);
+
                     if (perf.rank === 1) {
                         wins++;
                         const level = event.level ?? 0;
@@ -96,6 +105,12 @@ export const GlobalRankings = () => {
                     }
                     if (perf.rank <= 3) podiums++;
                 }
+            });
+
+            // Rule: Top 10 results per year
+            pointsByYear.forEach((points) => {
+                const sorted = [...points].sort((a, b) => b - a);
+                totalPoints += sorted.slice(0, 10).reduce((sum, p) => sum + p, 0);
             });
 
             return { ...c, totalPoints, wins, podiums, winsByPriority };
@@ -120,39 +135,39 @@ export const GlobalRankings = () => {
     const { stats, availableYears } = getStats();
 
     return (
-        <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col items-center justify-start p-8 bg-[url('/biathlon_bg.png')] bg-cover bg-center overflow-y-auto">
-            <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm fixed" />
+        <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col items-center justify-start p-4 md:p-8 bg-[url('/biathlon_bg.png')] bg-cover bg-center overflow-x-hidden">
+            <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm" />
 
-            <div className="relative z-10 w-full max-w-5xl space-y-8">
+            <div className="relative z-10 w-full max-w-5xl space-y-6 md:space-y-8">
 
                 <button
                     onClick={() => navigate('/select-location')}
-                    className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-4"
+                    className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-2 md:mb-4"
                 >
                     <ArrowLeft className="w-5 h-5" />
-                    Retour à la sélection
+                    <span>Retour</span>
                 </button>
 
-                <div className="glass-panel p-8 rounded-3xl border-t-4 border-t-yellow-500 bg-slate-800/50 backdrop-blur-md">
-                    <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-6">
-                        <div className="flex items-center gap-4">
+                <div className="glass-panel p-4 md:p-8 rounded-2xl md:rounded-3xl border-t-4 border-t-yellow-500 bg-slate-800/50 backdrop-blur-md">
+                    <div className="flex flex-col md:flex-row items-center justify-between mb-6 md:mb-8 gap-6">
+                        <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
                             <div className="p-3 bg-yellow-500/20 rounded-xl">
-                                <Globe className="w-8 h-8 text-yellow-500" />
+                                <Globe className="w-6 h-6 md:w-8 md:h-8 text-yellow-500" />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+                                <h2 className="text-xl md:text-2xl font-bold text-white flex items-center justify-center sm:justify-start gap-2">
                                     Super Classement Général
                                     <Crown className="w-5 h-5 text-yellow-500 fill-current" />
                                 </h2>
-                                <p className="text-slate-400 text-sm">Tous lieux et disciplines confondus</p>
+                                <p className="text-slate-400 text-xs md:text-sm">Tous lieux et disciplines confondus</p>
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-2 bg-slate-900/50 p-1.5 rounded-xl overflow-x-auto">
+                        <div className="flex items-center gap-2 bg-slate-900/50 p-1.5 rounded-xl overflow-x-auto max-w-full scrollbar-hide">
                             <button
                                 onClick={() => setSelectedYear('all')}
                                 className={clsx(
-                                    "px-4 py-2 rounded-lg text-sm font-bold transition-all whitespace-nowrap",
+                                    "px-4 py-2 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap",
                                     selectedYear === 'all'
                                         ? "bg-yellow-500 text-black shadow-lg shadow-yellow-500/20"
                                         : "text-slate-400 hover:text-white hover:bg-white/5"
@@ -165,7 +180,7 @@ export const GlobalRankings = () => {
                                     key={year}
                                     onClick={() => setSelectedYear(year)}
                                     className={clsx(
-                                        "px-4 py-2 rounded-lg text-sm font-bold transition-all whitespace-nowrap",
+                                        "px-4 py-2 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap",
                                         selectedYear === year
                                             ? "bg-yellow-500 text-black shadow-lg shadow-yellow-500/20"
                                             : "text-slate-400 hover:text-white hover:bg-white/5"
@@ -177,72 +192,72 @@ export const GlobalRankings = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 gap-8">
                         {/* Top 3 Podium */}
                         {stats[0] && (
-                            <div className="lg:col-span-2 flex flex-col md:flex-row justify-center items-end gap-4 mb-4">
+                            <div className="flex flex-col md:flex-row justify-center items-center md:items-end gap-6 md:gap-4 mb-8">
                                 {/* 2nd */}
                                 {stats[1] && (
                                     <div className="order-2 md:order-1 flex flex-col items-center">
-                                        <div className="text-xl font-bold text-slate-300 mb-2">{stats[1].name}</div>
-                                        <div className="h-32 w-24 bg-gradient-to-t from-slate-500/40 to-slate-500/10 rounded-t-lg flex items-end justify-center pb-4 border-t-2 border-slate-400">
-                                            <span className="text-3xl font-black text-slate-400">2</span>
+                                        <div className="text-base md:text-xl font-bold text-slate-300 mb-1">{stats[1].name}</div>
+                                        <div className="h-24 md:h-32 w-20 md:w-24 bg-gradient-to-t from-slate-500/40 to-slate-500/10 rounded-t-lg flex items-end justify-center pb-3 border-t-2 border-slate-400">
+                                            <span className="text-2xl md:text-3xl font-black text-slate-400">2</span>
                                         </div>
-                                        <div className="mt-2 font-black text-2xl text-slate-400">{stats[1].totalPoints} pts</div>
+                                        <div className="mt-1 md:mt-2 font-black text-lg md:text-2xl text-slate-400">{stats[1].totalPoints} pts</div>
                                     </div>
                                 )}
                                 {/* 1st */}
                                 <div className="order-1 md:order-2 flex flex-col items-center">
-                                    <Crown className="w-8 h-8 text-yellow-500 mb-2 animate-bounce" />
-                                    <div className="text-2xl font-black text-white mb-2">{stats[0].name}</div>
-                                    <div className="h-48 w-32 bg-gradient-to-t from-yellow-500/40 to-yellow-500/10 rounded-t-lg flex items-end justify-center pb-4 border-t-2 border-yellow-500 shadow-[0_-10px_40px_rgba(234,179,8,0.2)]">
-                                        <span className="text-5xl font-black text-yellow-500">1</span>
+                                    <Crown className="w-8 h-8 text-yellow-500 mb-1 animate-bounce" />
+                                    <div className="text-xl md:text-2xl font-black text-white mb-1">{stats[0].name}</div>
+                                    <div className="h-32 md:h-48 w-24 md:w-32 bg-gradient-to-t from-yellow-500/40 to-yellow-500/10 rounded-t-lg flex items-end justify-center pb-3 border-t-2 border-yellow-500 shadow-[0_-10px_40px_rgba(234,179,8,0.2)]">
+                                        <span className="text-4xl md:text-5xl font-black text-yellow-500">1</span>
                                     </div>
-                                    <div className="mt-2 font-black text-4xl text-yellow-500">{stats[0].totalPoints} pts</div>
+                                    <div className="mt-1 md:mt-2 font-black text-2xl md:text-4xl text-yellow-500">{stats[0].totalPoints} pts</div>
                                 </div>
                                 {/* 3rd */}
                                 {stats[2] && (
                                     <div className="order-3 md:order-3 flex flex-col items-center">
-                                        <div className="text-xl font-bold text-amber-700 mb-2">{stats[2].name}</div>
-                                        <div className="h-24 w-24 bg-gradient-to-t from-amber-700/40 to-amber-700/10 rounded-t-lg flex items-end justify-center pb-4 border-t-2 border-amber-700">
-                                            <span className="text-3xl font-black text-amber-700">3</span>
+                                        <div className="text-base md:text-xl font-bold text-amber-700 mb-1">{stats[2].name}</div>
+                                        <div className="h-20 md:h-24 w-20 md:w-24 bg-gradient-to-t from-amber-700/40 to-amber-700/10 rounded-t-lg flex items-end justify-center pb-3 border-t-2 border-amber-700">
+                                            <span className="text-2xl md:text-3xl font-black text-amber-700">3</span>
                                         </div>
-                                        <div className="mt-2 font-black text-2xl text-amber-700">{stats[2].totalPoints} pts</div>
+                                        <div className="mt-1 md:mt-2 font-black text-lg md:text-2xl text-amber-700">{stats[2].totalPoints} pts</div>
                                     </div>
                                 )}
                             </div>
                         )}
 
-                        <div className="lg:col-span-2">
+                        <div className="w-full">
                             <div className="overflow-hidden rounded-xl border border-white/5 bg-slate-900/40">
                                 <div className="overflow-x-auto">
-                                    <table className="w-full min-w-[700px]">
+                                    <table className="w-full border-collapse">
                                         <thead className="bg-white/5 border-b border-white/5">
-                                            <tr className="text-left text-slate-400 text-sm uppercase tracking-wider">
-                                                <th className="px-6 py-4 font-bold">Rang</th>
-                                                <th className="px-6 py-4 font-bold">Concurrent</th>
-                                                <th className="px-6 py-4 font-bold text-center">Victoires</th>
-                                                <th className="px-6 py-4 font-bold text-center">Podiums</th>
-                                                <th className="px-6 py-4 font-bold text-right">Points</th>
+                                            <tr className="text-left text-slate-400 text-[10px] md:text-sm uppercase tracking-wider">
+                                                <th className="px-3 md:px-6 py-4 font-bold">Rang</th>
+                                                <th className="px-3 md:px-6 py-4 font-bold">Concurrent</th>
+                                                <th className="hidden sm:table-cell px-6 py-4 font-bold text-center">Victoires</th>
+                                                <th className="hidden sm:table-cell px-6 py-4 font-bold text-center">Podiums</th>
+                                                <th className="px-3 md:px-6 py-4 font-bold text-right">Points</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-white/5">
                                             {stats.slice(3, 10).map((c: any, idx: number) => (
                                                 <tr key={c.id} className="hover:bg-white/5 transition-colors">
-                                                    <td className="px-6 py-4 font-bold text-slate-500">#{idx + 4}</td>
-                                                    <td className="px-6 py-4 font-semibold text-white">{c.name}</td>
-                                                    <td className="px-6 py-4 text-center">
+                                                    <td className="px-3 md:px-6 py-4 font-bold text-slate-500 text-sm">#{idx + 4}</td>
+                                                    <td className="px-3 md:px-6 py-4 font-semibold text-white text-sm truncate max-w-[120px] md:max-w-none">{c.name}</td>
+                                                    <td className="hidden sm:table-cell px-6 py-4 text-center">
                                                         {c.wins > 0 && <span className="px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold">{c.wins}</span>}
                                                     </td>
-                                                    <td className="px-6 py-4 text-center text-slate-400">{c.podiums}</td>
-                                                    <td className="px-6 py-4 text-right font-bold text-yellow-500 text-lg">{c.totalPoints}</td>
+                                                    <td className="hidden sm:table-cell px-6 py-4 text-center text-slate-400">{c.podiums}</td>
+                                                    <td className="px-3 md:px-6 py-4 text-right font-bold text-yellow-500 text-base md:text-lg">{c.totalPoints}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
                                 {stats.length > 10 && (
-                                    <div className="px-6 py-4 text-center text-slate-500 italic border-t border-white/5 bg-white/5">
+                                    <div className="px-6 py-4 text-center text-slate-500 text-xs italic border-t border-white/5 bg-white/5">
                                         ... et {stats.length - 10} autres concurrents
                                     </div>
                                 )}

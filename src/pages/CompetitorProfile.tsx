@@ -30,8 +30,6 @@ export const CompetitorProfile = () => {
     const filteredRaces = competitorsRaces.filter(race => {
         const event = allEvents.find(e => e.id === race.eventId);
         if (!event) return false;
-        // Only include sprint events
-        if (event.type && event.type !== 'sprint') return false;
         if (selectedYear === 'all') return true;
         return new Date(event.date).getFullYear() === selectedYear;
     });
@@ -57,18 +55,32 @@ export const CompetitorProfile = () => {
         if (rank > 0 && rank <= 3) podiums++;
 
         // Shooting Stats
-        if (race.shooting1) { proneShots += 5; proneHits += (5 - race.shooting1.errors); }
-        if (race.shooting2) { standShots += 5; standHits += (5 - race.shooting2.errors); }
+        if (race.mode === 'individual') {
+            // Individual: 1+2 = Prone, 3+4 = Standing
+            if (race.shooting1) { proneShots += 5; proneHits += (5 - race.shooting1.errors); }
+            if (race.shooting2) { proneShots += 5; proneHits += (5 - race.shooting2.errors); }
+            if (race.shooting3) { standShots += 5; standHits += (5 - race.shooting3.errors); }
+            if (race.shooting4) { standShots += 5; standHits += (5 - race.shooting4.errors); }
+        } else {
+            // Other (Sprint/Pursuit/Relay): 1 = Prone, 2 = Standing
+            if (race.shooting1) { proneShots += 5; proneHits += (5 - race.shooting1.errors); }
+            if (race.shooting2) { standShots += 5; standHits += (5 - race.shooting2.errors); }
+        }
 
         // Best Total Time
         if (race.totalTime && race.totalTime < bestTime) bestTime = race.totalTime;
 
-        // Best Ski Time (Total - Shooting Time on range)
-        // Note: This matches logic in EventDashboard
-        if (race.splits.shoot1 && race.splits.lap1 && race.splits.shoot2 && race.splits.lap2 && race.totalTime) {
-            const shoot1Duration = race.splits.shoot1 - race.splits.lap1;
-            const shoot2Duration = race.splits.shoot2 - race.splits.lap2;
-            const ski = race.totalTime - shoot1Duration - shoot2Duration;
+        // Best Ski Time Calculation
+        if (race.totalTime) {
+            let totalShootDuration = 0;
+            if (race.splits.shoot1 !== undefined && race.splits.lap1 !== undefined) totalShootDuration += (race.splits.shoot1 - race.splits.lap1);
+            if (race.splits.shoot2 !== undefined && race.splits.lap2 !== undefined) totalShootDuration += (race.splits.shoot2 - race.splits.lap2);
+            if (race.splits.shoot3 !== undefined && race.splits.lap3 !== undefined) totalShootDuration += (race.splits.shoot3 - race.splits.lap3);
+            if (race.splits.shoot4 !== undefined && race.splits.lap4 !== undefined) totalShootDuration += (race.splits.shoot4 - race.splits.lap4);
+
+            const startVal = race.splits.start || 0;
+            const totalDuration = (race.splits.finish || race.totalTime) - startVal;
+            const ski = totalDuration - totalShootDuration;
             if (ski < bestSkiTime) bestSkiTime = ski;
         }
     });
@@ -253,18 +265,32 @@ export const CompetitorProfile = () => {
                                 <tbody className="divide-y divide-white/5">
                                     {filteredRaces?.slice().reverse().map(race => {
                                         const event = allEvents?.find(e => e.id === race.eventId);
-                                        const errors = (race.shooting1?.errors || 0) + (race.shooting2?.errors || 0);
+                                        const totalShots = race.mode === 'individual' ? 20 : 10;
+                                        const errors = (race.shooting1?.errors || 0) + (race.shooting2?.errors || 0) + (race.shooting3?.errors || 0) + (race.shooting4?.errors || 0);
+
+                                        let shotBreakdown = "";
+                                        if (race.mode === 'individual') {
+                                            shotBreakdown = `C: ${5 - (race.shooting1?.errors || 0)} | C: ${5 - (race.shooting2?.errors || 0)} | D: ${5 - (race.shooting3?.errors || 0)} | D: ${5 - (race.shooting4?.errors || 0)}`;
+                                        } else {
+                                            shotBreakdown = `C: ${5 - (race.shooting1?.errors || 0)} | D: ${5 - (race.shooting2?.errors || 0)}`;
+                                        }
+
                                         return (
-                                            <tr key={race.id} className="hover:bg-white/5 transition-colors">
-                                                <td className="p-4 text-slate-400">{event ? new Date(event.date).toLocaleDateString() : '-'}</td>
+                                            <tr key={race.id} className="hover:bg-white/5 transition-colors cursor-pointer" onClick={() => navigate(`/events/${event?.id}`)}>
+                                                <td className="p-4 text-slate-400">
+                                                    <div className="flex flex-col">
+                                                        <span>{event ? new Date(event.date).toLocaleDateString() : '-'}</span>
+                                                        <span className="text-xs uppercase text-slate-600">{race.mode}</span>
+                                                    </div>
+                                                </td>
                                                 <td className="p-4 font-medium text-white">{event?.name || 'Inconnu'}</td>
                                                 <td className="p-4 text-center">
                                                     <div className="flex flex-col items-center text-xs">
                                                         <span className={errors === 0 ? "text-emerald-400 font-bold" : "text-slate-300"}>
-                                                            {10 - errors}/10
+                                                            {totalShots - errors}/{totalShots}
                                                         </span>
-                                                        <span className="text-slate-600 scale-75">
-                                                            C: {5 - (race.shooting1?.errors || 0)} | D: {5 - (race.shooting2?.errors || 0)}
+                                                        <span className="text-slate-600 scale-75 whitespace-nowrap">
+                                                            {shotBreakdown}
                                                         </span>
                                                     </div>
                                                 </td>
@@ -289,10 +315,15 @@ export const CompetitorProfile = () => {
 const SkiAnalysisView = ({ races, allEvents, navigate }: { races: any[], allEvents: any[], navigate: any }) => {
     // Calculate Ski Times
     const data = races.map(race => {
-        if (!race.splits.shoot1 || !race.splits.lap1 || !race.splits.shoot2 || !race.splits.lap2 || !race.totalTime) return null;
-        const shoot1Duration = race.splits.shoot1 - race.splits.lap1;
-        const shoot2Duration = race.splits.shoot2 - race.splits.lap2;
-        const skiTime = race.totalTime - shoot1Duration - shoot2Duration;
+        if (!race.totalTime) return null;
+
+        let totalShootDuration = 0;
+        if (race.splits.shoot1 && race.splits.lap1) totalShootDuration += (race.splits.shoot1 - race.splits.lap1);
+        if (race.splits.shoot2 && race.splits.lap2) totalShootDuration += (race.splits.shoot2 - race.splits.lap2);
+        if (race.splits.shoot3 && race.splits.lap3) totalShootDuration += (race.splits.shoot3 - race.splits.lap3);
+        if (race.splits.shoot4 && race.splits.lap4) totalShootDuration += (race.splits.shoot4 - race.splits.lap4);
+
+        const skiTime = race.totalTime - totalShootDuration;
         const event = allEvents.find(e => e.id === race.eventId);
         return { ...race, skiTime, eventName: event?.name, eventDate: event?.date };
     }).filter(d => d !== null).sort((a, b) => a!.skiTime - b!.skiTime);
